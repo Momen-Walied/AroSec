@@ -1,0 +1,10 @@
+# Agent/session state — never commit
+.omo/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/

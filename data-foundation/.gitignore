@@ -1,0 +1,52 @@
+# === Data: never commit raw or large derived artifacts ===
+data/raw/
+data/interim/
+data/processed/
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+*.pcap
+*.pcapng
+*.cap
+
+# Dataset archives / partial downloads
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.part
+*.download
+
+# Small developer samples ARE tracked (they are intentionally tiny)
+!samples/*.jsonl
+!samples/*.parquet
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# === Secrets / credentials ===
+.env
+.env.*
+!.env.example
+*.pem
+*credentials*
+!*credentials.example
+
+# === Tooling caches ===
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# === OS ===
+.DS_Store
+Thumbs.db

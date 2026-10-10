@@ -1,0 +1,172 @@
+# Vigilance Data Foundation — Dataset Registry (configs/datasets.yaml)
+#
+# Single source of truth for dataset metadata. Consumed by src/datasets/registry.py.
+# Rule: never claim a capability/format exists unless inspection confirms it.
+# Field: status is one of:
+#   NOT_CHECKED | AVAILABLE | DOWNLOADED | MANUAL_DOWNLOAD_REQUIRED | FAILED | NORMALIZED
+# Field: time_information_quality is one of:
+#   exact | coarse | relative | none | unknown
+
+schema_version: "0.1.0"
+
+datasets:
+
+  cicapt_iiot:
+    dataset_id: cicapt_iiot
+    name: "CIC APT IIoT Dataset 2024"
+    long_name: "CIC Advanced Persistent Threat Dataset for IIoT 2024"
+    year: 2024
+    official_url: "https://www.unb.ca/cic/datasets/iiot-dataset-2024.html"
+    download_url: "https://cicresearch.ca/IOTDataset/CICAPT-IIoT%20Dataset/"
+    download_access: REGISTRATION_FORM   # insert.php -> browse.php (name/email/institution/job_title/country)
+    license: "UNB CIC dataset terms (research use; citation required)"
+    license_notes: >
+      Distributed by the Canadian Institute for Cybersecurity (UNB). Access is granted after submitting a
+      short registration form acknowledging the research-use terms. Redistribution is not permitted.
+      Citation: Ghiasvand et al., "Resilience Against APTs: A Provenance-Based IIoT Dataset for
+      Cybersecurity Research" (Mobiquitous'24) / arXiv:2407.11278.
+    automated_download_supported: false
+    manual_download_required: true
+    raw_formats: [csv, pcap]
+    contains_pcap: true              # confirmed by official description ("network traffic ... pcap files")
+    contains_flows: true             # pcap2csv.py derived network CSV described officially
+    contains_labels: true            # attack information file (time, PID, category)
+    contains_attack_stage: true      # MITRE tactic mapping (8 tactics) documented
+    contains_lateral_movement: true  # T1021 Remote Services (SSH) listed as lateral movement
+    contains_device_identity: partial # provenance nodes carry process/artifact identity, not full asset inventory
+    contains_provenance: true        # core of the dataset (Used/WGB/WTB/WDF edges)
+    time_information_quality: exact
+    estimated_download_size: "unknown (not verifiable while gated; described as multi-GB with PCAPs)"
+    local_path: "data/raw/cicapt_iiot"
+    status: MANUAL_DOWNLOAD_REQUIRED
+    priority: 1
+    notes: >
+      Highest priority: APT campaign stages + provenance graph + attack_info. The download endpoint is a
+      registration form; automated access is intentionally NOT attempted. Place files under
+      data/raw/cicapt_iiot/ to enable normalize/validate. Adapter expects: provenance CSVs, network CSV,
+      and Attack_info.csv.
+
+  x_iiotid:
+    dataset_id: x_iiotid
+    name: "X-IIoTID 2021"
+    long_name: "X-IIoTID: A Connectivity- and Device-agnostic Intrusion Dataset for Industrial IoT"
+    year: 2021
+    official_url: "https://ieee-dataport.org/documents/x-iiotid-connectivity-and-device-agnostic-intrusion-dataset-industrial-internet-things"
+    download_url: "https://ieee-dataport.org/documents/x-iiotid-connectivity-and-device-agnostic-intrusion-dataset-industrial-internet-things"
+    download_access: LOGIN_REQUIRED   # IEEE DataPort authentication + terms acceptance
+    license: "IEEE DataPort terms (see dataset page; research use)"
+    license_notes: >
+      Hosted on IEEE DataPort; requires an IEEE account and acceptance of terms. Not redistributed here.
+      Citation: Alsaedi et al., "TON_IoT Telemetry Dataset" / X-IIoTID, Computers & Security (2021).
+    automated_download_supported: false
+    manual_download_required: true
+    raw_formats: [csv]
+    contains_pcap: false
+    contains_flows: true             # flow/label CSV with device + connectivity attributes
+    contains_labels: true
+    contains_attack_stage: false     # attack *type* yes; APT-style *stage* no
+    contains_lateral_movement: true  # explicit lateral-movement attack class
+    contains_device_identity: true   # device-agnostic identity fields (device/connectivity columns)
+    contains_provenance: false
+    time_information_quality: exact
+    estimated_download_size: "approx 1 GB (not verified while login-gated)"
+    local_path: "data/raw/x_iiotid"
+    status: MANUAL_DOWNLOAD_REQUIRED
+    priority: 2
+    notes: >
+      Provides MQTT/Modbus/TCP/CoAP samples and explicit lateral-movement labels. Adapter is written to
+      accept the official CSV once placed in data/raw/x_iiotid/. Requires login; not bypassed.
+
+  unsw_iotraffic:
+    dataset_id: unsw_iotraffic
+    name: "UNSW-IoTraffic 2025"
+    long_name: "UNSW IoT traffic data with packets, flows, and protocols"
+    year: 2025
+    official_url: "https://doi.org/10.5061/dryad.w0vt4b94b"
+    download_url: "https://datadryad.org/dataset/doi:10.5061/dryad.w0vt4b94b"
+    download_access: OPEN_ACCESS_ANTIBOT # open access; Dryad file streams sit behind Anubis PoW (browser-passable)
+    license: "See Dryad dataset page (open access; reuse terms per Dryad)"
+    license_notes: >
+      Open-access on Dryad. Citation: Wannigama, Sivanathan, Habibi Gharakheili (2025), UNSW IoT traffic
+      data with packets, flows, and protocols [Dataset], Dryad, DOI 10.5061/dryad.w0vt4b94b.
+    automated_download_supported: partial   # small CSVs via API; large zips via a real browser (Anubis)
+    manual_download_required: false
+    raw_formats: [csv, pcap]
+    contains_pcap: true
+    contains_flows: true             # per-device bidirectional 5-tuple flow CSVs
+    contains_labels: false           # NO ground-truth attack labels (normal behaviour only)
+    contains_attack_stage: false
+    contains_lateral_movement: false
+    contains_device_identity: true   # per-device filenames carry DeviceName + DeviceMAC
+    contains_provenance: false
+    time_information_quality: exact
+    estimated_download_size: "28.47 GB total; flows.zip 95.51 MB; device_pcap_summary.csv 1.84 KB; pcaps.zip 13.92 GB"
+    local_path: "data/raw/unsw_iotraffic"
+    status: NORMALIZED
+    priority: 3
+    notes: >
+      Long-duration NORMAL IoT behaviour (203 days, 27 devices) — ideal for historical edge baselines
+      (edge_age, historical_peer_count, new_peer, protocol novelty, time-of-day). No labels. Sample mode
+      uses flows.zip + device_pcap_summary.csv. Dryad files listed (file_stream ids):
+      device_pcap_summary.csv=4322597, flows.zip=4322594, protocol_diversity_prevalence.csv=4322598,
+      README.md=4322603, scripts.zip=4322596, pcaps.zip=4322593, UNSW-IoTraffic.zip=4322592.
+
+  edge_iiotset:
+    dataset_id: edge_iiotset
+    name: "Edge-IIoTset 2022"
+    long_name: "Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT and IIoT"
+    year: 2022
+    official_url: "https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot"
+    download_url: "https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot"
+    download_access: KAGGLE_AUTH
+    license: "CC BY 4.0 (per Kaggle listing) — verify on page"
+    license_notes: >
+      Kaggle download requires an authenticated Kaggle account/API token. Not bypassed. Secondary/optional.
+      Citation: Ferrag et al., "Edge-IIoTset: A New Comprehensive Realistic Cyber Security Dataset of IoT
+      and IIoT Applications for Centralized and Federated Learning", IEEE Access (2022).
+    automated_download_supported: false   # only with user-provided Kaggle credentials
+    manual_download_required: true
+    raw_formats: [csv, pcap]
+    contains_pcap: true
+    contains_flows: true
+    contains_labels: true
+    contains_attack_stage: false
+    contains_lateral_movement: false
+    contains_device_identity: true
+    contains_provenance: false
+    time_information_quality: exact
+    estimated_download_size: "approx 3-4 GB (not verified while auth-gated)"
+    local_path: "data/raw/edge_iiotset"
+    status: NOT_CHECKED
+    priority: 4
+    notes: "Secondary/optional. Not downloaded in v0.1 unless credentials provided."
+
+  ciciot2023:
+    dataset_id: ciciot2023
+    name: "CICIoT2023"
+    long_name: "CIC IoT Dataset 2023"
+    year: 2023
+    official_url: "https://www.unb.ca/cic/datasets/iotdataset-2023.html"
+    download_url: "https://www.unb.ca/cic/datasets/iotdataset-2023.html"
+    download_access: REGISTRATION_FORM
+    license: "UNB CIC dataset terms (research use; citation required)"
+    license_notes: >
+      UNB CIC. Access typically gated similarly to other CIC datasets. Secondary/optional.
+      Citation: Neto et al., "CICIoT2023: A Real-Time Dataset and Benchmark for Large-Scale Attacks in
+      IoT Environment", Sensors (2023).
+    automated_download_supported: false
+    manual_download_required: true
+    raw_formats: [csv, pcap]
+    contains_pcap: true
+    contains_flows: true
+    contains_labels: true
+    contains_attack_stage: false
+    contains_lateral_movement: partial
+    contains_device_identity: partial
+    contains_provenance: false
+    time_information_quality: exact
+    estimated_download_size: "large (CSV ~ several GB) — verify before download"
+    local_path: "data/raw/ciciot2023"
+    status: NOT_CHECKED
+    priority: 5
+    notes: "Secondary/optional. Storage-heavy; not downloaded in v0.1."
