@@ -91,3 +91,62 @@ def compare_windows(offline: list[EdgeFeatureWindowV2], online: list[EdgeFeature
                     report["examples"].append({"key": key, "field": f, "offline": va, "online": vb})
     report["total_mismatches"] = sum(report["field_mismatches"].values())
     return report
+
+
+# --------------------------------------------------------------------------- #
+# Node Feature parity                                                         #
+# --------------------------------------------------------------------------- #
+NODE_COMPARE_FIELDS = [
+    "outgoing_connection_count", "incoming_connection_count",
+    "outgoing_packet_count", "incoming_packet_count",
+    "outgoing_bytes", "incoming_bytes",
+    "unique_outgoing_peers", "unique_incoming_peers",
+    "new_outgoing_peer_count", "new_incoming_peer_count",
+    "unique_outgoing_ports", "unique_incoming_ports",
+    "outbound_protocol_count", "inbound_protocol_count",
+    "outbound_app_protocol_count", "inbound_app_protocol_count",
+    "protocol_novelty_count", "port_novelty_count",
+    "fan_out", "fan_in", "relationship_creation_count",
+]
+
+
+def offline_node_reference(observations: list[CommunicationObservation]) -> list:
+    from ai.node_behavior.features.builder import build_node_feature_windows_v2
+
+    return build_node_feature_windows_v2(observations)
+
+
+def online_node_reference(observations: list[CommunicationObservation], window_seconds: int = 30,
+                          allowed_lateness_seconds: int = 0,
+                          source: str = "unsw_iotraffic") -> list:
+    from ai.shadow.features.online_node_builder import OnlineNodeFeatureBuilder
+
+    builder = OnlineNodeFeatureBuilder(window_seconds, allowed_lateness_seconds, dataset_source=source)
+    ordered = sorted(observations, key=lambda o: (o.window_start, o.observation_id))
+    out: list = []
+    for o in ordered:
+        out.extend(builder.add(o))
+    out.extend(builder.flush())
+    return out
+
+
+def _node_key(w) -> tuple[str, str]:
+    return (w.window_start.isoformat(), w.asset_id)
+
+
+def compare_node_windows(offline: list, online: list) -> dict:
+    off = {_node_key(w): w for w in offline}
+    onl = {_node_key(w): w for w in online}
+    report = {"offline_windows": len(off), "online_windows": len(onl),
+              "missing_in_online": len(set(off) - set(onl)), "extra_in_online": len(set(onl) - set(off)),
+              "field_mismatches": {f: 0 for f in NODE_COMPARE_FIELDS}, "examples": []}
+    for key in set(off) & set(onl):
+        a, b = off[key], onl[key]
+        for f in NODE_COMPARE_FIELDS:
+            if getattr(a, f) != getattr(b, f):
+                report["field_mismatches"][f] += 1
+                if len(report["examples"]) < 10:
+                    report["examples"].append({"key": key, "field": f, "offline": getattr(a, f),
+                                               "online": getattr(b, f)})
+    report["total_mismatches"] = sum(report["field_mismatches"].values())
+    return report

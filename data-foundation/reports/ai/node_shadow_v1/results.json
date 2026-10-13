@@ -1,0 +1,582 @@
+{
+  "edge_parity": {
+    "offline_windows": 67885,
+    "online_windows": 67885,
+    "missing_in_online": 0,
+    "extra_in_online": 0,
+    "field_mismatches": {
+      "connections_count": 0,
+      "packet_count": 0,
+      "outbound_bytes": 0,
+      "inbound_bytes": 0,
+      "protocol_distribution": 0,
+      "application_protocol_distribution": 0,
+      "observed_destination_ports": 0,
+      "observed_source_ports": 0,
+      "unique_destination_ports": 0,
+      "unique_source_ports": 0,
+      "relationship_age_seconds": 0,
+      "historical_connection_count": 0,
+      "new_peer": 0,
+      "src_unique_peer_count": 0,
+      "src_new_peer_count": 0,
+      "protocol_novelty_count": 0,
+      "protocol_novelty_ratio": 0,
+      "port_novelty_count": 0
+    },
+    "examples": [],
+    "total_mismatches": 0
+  },
+  "node_parity": {
+    "offline_windows": 103680,
+    "online_windows": 103680,
+    "missing_in_online": 0,
+    "extra_in_online": 0,
+    "field_mismatches": {
+      "outgoing_connection_count": 0,
+      "incoming_connection_count": 0,
+      "outgoing_packet_count": 0,
+      "incoming_packet_count": 0,
+      "outgoing_bytes": 0,
+      "incoming_bytes": 0,
+      "unique_outgoing_peers": 0,
+      "unique_incoming_peers": 0,
+      "new_outgoing_peer_count": 0,
+      "new_incoming_peer_count": 0,
+      "unique_outgoing_ports": 0,
+      "unique_incoming_ports": 0,
+      "outbound_protocol_count": 0,
+      "inbound_protocol_count": 0,
+      "outbound_app_protocol_count": 0,
+      "inbound_app_protocol_count": 0,
+      "protocol_novelty_count": 0,
+      "port_novelty_count": 0,
+      "fan_out": 0,
+      "fan_in": 0,
+      "relationship_creation_count": 0
+    },
+    "examples": [],
+    "total_mismatches": 0
+  },
+  "edge_analytics": {
+    "records": 67885,
+    "span_days": 31.178125,
+    "scored_windows": 67885,
+    "scored_windows_per_day": 2177.327854064348,
+    "alerts": 566,
+    "alert_rate": 0.008337629815128526,
+    "alerts_per_site_per_day": 18.153753633356718,
+    "alerts_per_asset_per_day": 1.2966966880969086,
+    "alerts_per_relationship_per_day": 0.24532099504536106,
+    "score_percentiles": {
+      "p50": 0.1950892119258124,
+      "p90": 0.2586291324247526,
+      "p95": 0.272095283945585,
+      "p99": 0.31164812465609704
+    },
+    "severity_distribution": {
+      "CRITICAL": 103,
+      "INFO": 67322,
+      "MEDIUM": 252,
+      "HIGH": 77,
+      "LOW": 131
+    },
+    "top_reasons": [
+      [
+        "TRAFFIC_VOLUME_DEVIATION",
+        38802
+      ],
+      [
+        "FAN_OUT_DEVIATION",
+        27913
+      ],
+      [
+        "PROTOCOL_NOVELTY",
+        9292
+      ],
+      [
+        "PORT_NOVELTY",
+        105
+      ],
+      [
+        "NEW_PEER",
+        74
+      ],
+      [
+        "APP_PROTOCOL_NOVELTY",
+        73
+      ],
+      [
+        "PORT_DIVERSITY",
+        23
+      ]
+    ],
+    "novelty_frequency": {
+      "NEW_PEER": 0.0010900788097517862,
+      "PORT_NOVELTY": 0.0015467334462694261,
+      "PROTOCOL_NOVELTY": 0.13687854459748103,
+      "FAN_OUT_DEVIATION": 0.411180673197319,
+      "TRAFFIC_VOLUME_DEVIATION": 0.5715842969728216,
+      "APP_PROTOCOL_NOVELTY": 0.0010753480150254107
+    },
+    "score_by_identity_method": {
+      "dataset_ip_fallback": {
+        "p50": 0.1950892119258124,
+        "p90": 0.2586291324247526,
+        "p95": 0.272095283945585,
+        "p99": 0.31164812465609704
+      }
+    },
+    "processing_latency_ms": {
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "alert_rate_by_day": {
+      "2016-09-30": 0.13908872901678657,
+      "2016-10-01": 0.01205895489057615,
+      "2016-10-02": 0.0018256503879507074,
+      "2016-10-03": 0.0013921113689095127,
+      "2016-10-04": 0.005927952576379389,
+      "2016-10-05": 0.008562415502478594,
+      "2016-10-06": 0.0022851919561243145,
+      "2016-10-07": 0.0018181818181818182,
+      "2016-10-08": 0.002276867030965392,
+      "2016-10-09": 0.0022391401701746527,
+      "2016-10-10": 0.0013704888076747374,
+      "2016-10-11": 0.0009037505648441031,
+      "2016-10-12": 0.0014705882352941176,
+      "2016-10-13": 0.003216911764705882,
+      "2016-10-14": 0.001827318410232983,
+      "2016-10-15": 0.0013723696248856359,
+      "2016-10-16": 0.0017809439002671415,
+      "2016-10-17": 0.0008968609865470852,
+      "2016-10-18": 0.0008952551477170994,
+      "2016-10-19": 0.005284015852047556,
+      "2016-10-20": 0.012769704975781594,
+      "2016-10-21": 0.030731904569348968,
+      "2016-10-22": 0.0008880994671403197,
+      "2016-10-23": 0.007155635062611807,
+      "2016-10-24": 0.005104408352668214,
+      "2016-10-25": 0.005494505494505495,
+      "2016-10-26": 0.0036380172805820826,
+      "2016-10-27": 0.03561076604554866,
+      "2016-10-28": 0.02424830261881668,
+      "2016-10-29": 0.01497584541062802,
+      "2016-10-30": 0.013039117352056168,
+      "2016-10-31": 0.01708150317227916
+    },
+    "unique_assets": 14,
+    "unique_relationships": 74,
+    "site": "replay_site"
+  },
+  "node_analytics": {
+    "records": 103680,
+    "span_days": 31.178125,
+    "site": "replay_site",
+    "scored_windows": 103680,
+    "scored_windows_per_day": 3325.4084394106444,
+    "alerts": 669,
+    "alert_rate": 0.0064525462962962965,
+    "alerts_per_site_per_day": 21.4573519093916,
+    "alerts_per_entity_per_day": 0.3405928874506603,
+    "score_percentiles": {
+      "p50": 0.26827507354742475,
+      "p90": 0.5365501470948495,
+      "p95": 0.609525181414146,
+      "p99": 0.6934810049983032
+    },
+    "severity_distribution": {
+      "CRITICAL": 137,
+      "INFO": 103011,
+      "LOW": 381,
+      "MEDIUM": 123,
+      "HIGH": 28
+    },
+    "top_reasons": [
+      [
+        "PORT_DIVERSITY_CHANGE",
+        77705
+      ],
+      [
+        "COMMUNICATION_RATIO_SHIFT",
+        74632
+      ],
+      [
+        "OUTBOUND_VOLUME_DEVIATION",
+        72814
+      ],
+      [
+        "INBOUND_VOLUME_DEVIATION",
+        48411
+      ],
+      [
+        "PROTOCOL_DIVERSITY_CHANGE",
+        43533
+      ],
+      [
+        "FAN_OUT_DEVIATION",
+        35902
+      ],
+      [
+        "RELATIONSHIP_CREATION_BURST",
+        128
+      ],
+      [
+        "PEER_SET_CHANGE",
+        72
+      ],
+      [
+        "NEW_PEER_BURST",
+        58
+      ],
+      [
+        "FAN_IN_DEVIATION",
+        1
+      ]
+    ],
+    "reason_frequency": {
+      "FAN_OUT_DEVIATION": 0.3462770061728395,
+      "FAN_IN_DEVIATION": 9.645061728395062e-06,
+      "NEW_PEER_BURST": 0.0005594135802469136,
+      "PEER_SET_CHANGE": 0.0006944444444444445,
+      "RELATIONSHIP_CREATION_BURST": 0.0012345679012345679,
+      "PROTOCOL_DIVERSITY_CHANGE": 0.41987847222222224,
+      "PORT_DIVERSITY_CHANGE": 0.7494695216049383,
+      "OUTBOUND_VOLUME_DEVIATION": 0.702295524691358,
+      "INBOUND_VOLUME_DEVIATION": 0.4669270833333333,
+      "COMMUNICATION_RATIO_SHIFT": 0.7198302469135802
+    },
+    "unique_entities": 63
+  },
+  "complementarity": {
+    "both": 25,
+    "edge_only": 413,
+    "node_only": 504,
+    "pct_both": 0.02653927813163482,
+    "pct_edge_only": 0.43842887473460723,
+    "pct_node_only": 0.535031847133758,
+    "pct_neither": 0.0,
+    "edge_alerts_per_node_alert_window": 0.07183364839319471,
+    "pct_node_alerts_with_edge": 0.04725897920604915,
+    "pct_edge_alerts_while_node_normal": 0.9429223744292238
+  },
+  "correlation": {
+    "windows": 35805,
+    "pearson": 0.003831393559890382,
+    "spearman": 0.0016734034398437048
+  },
+  "incidents": [
+    {
+      "asset": "asset:unsw:176.32.98.204",
+      "window_start": "2016-09-30T19:30:00+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "PORT_DIVERSITY_CHANGE",
+        "PROTOCOL_DIVERSITY_CHANGE"
+      ],
+      "related_edges": [
+        {
+          "edge": "176.32.98.204->192.168.1.240",
+          "score": 0.679,
+          "alert": true
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:192.168.1.240",
+      "window_start": "2016-09-30T20:34:30+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "PORT_DIVERSITY_CHANGE",
+        "PROTOCOL_DIVERSITY_CHANGE",
+        "INBOUND_VOLUME_DEVIATION"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->192.168.1.1",
+          "score": 0.273,
+          "alert": false
+        },
+        {
+          "edge": "192.168.1.240->208.67.220.220",
+          "score": 0.273,
+          "alert": false
+        },
+        {
+          "edge": "192.168.1.240->8.8.8.8",
+          "score": 0.311,
+          "alert": false
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:192.168.1.240",
+      "window_start": "2016-09-30T20:35:30+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "PORT_DIVERSITY_CHANGE",
+        "PROTOCOL_DIVERSITY_CHANGE",
+        "INBOUND_VOLUME_DEVIATION"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->192.168.1.1",
+          "score": 0.229,
+          "alert": false
+        },
+        {
+          "edge": "192.168.1.240->54.239.26.180",
+          "score": 0.255,
+          "alert": false
+        },
+        {
+          "edge": "192.168.1.240->72.21.192.213",
+          "score": 0.221,
+          "alert": false
+        },
+        {
+          "edge": "192.168.1.240->72.21.207.120",
+          "score": 0.296,
+          "alert": false
+        },
+        {
+          "edge": "192.168.1.240->8.8.8.8",
+          "score": 0.215,
+          "alert": false
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:72.21.192.213",
+      "window_start": "2016-09-30T20:41:00+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "PORT_DIVERSITY_CHANGE",
+        "PROTOCOL_DIVERSITY_CHANGE"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->72.21.192.213",
+          "score": 0.218,
+          "alert": false
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:74.125.34.101",
+      "window_start": "2016-09-30T21:31:00+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "INBOUND_VOLUME_DEVIATION",
+        "PORT_DIVERSITY_CHANGE",
+        "PROTOCOL_DIVERSITY_CHANGE"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->74.125.34.101",
+          "score": 0.28,
+          "alert": false
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:192.168.1.240",
+      "window_start": "2016-09-30T21:33:00+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "NEW_PEER_BURST",
+        "RELATIONSHIP_CREATION_BURST",
+        "COMMUNICATION_RATIO_SHIFT",
+        "PORT_DIVERSITY_CHANGE",
+        "OUTBOUND_VOLUME_DEVIATION"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->107.170.224.8",
+          "score": 0.197,
+          "alert": false
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:192.168.1.1",
+      "window_start": "2016-09-30T21:33:30+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "INBOUND_VOLUME_DEVIATION",
+        "PORT_DIVERSITY_CHANGE",
+        "COMMUNICATION_RATIO_SHIFT"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->192.168.1.1",
+          "score": 0.26,
+          "alert": false
+        }
+      ]
+    },
+    {
+      "asset": "asset:unsw:8.8.8.8",
+      "window_start": "2016-09-30T21:33:30+00:00",
+      "node_score": 1.0,
+      "node_severity": "CRITICAL",
+      "node_reasons": [
+        "RELATIONSHIP_CREATION_BURST",
+        "PEER_SET_CHANGE",
+        "PROTOCOL_DIVERSITY_CHANGE",
+        "INBOUND_VOLUME_DEVIATION",
+        "COMMUNICATION_RATIO_SHIFT"
+      ],
+      "related_edges": [
+        {
+          "edge": "192.168.1.240->8.8.8.8",
+          "score": 0.296,
+          "alert": false
+        }
+      ]
+    }
+  ],
+  "drift": {
+    "anomaly_score": {
+      "psi": 0.004984486222037286,
+      "ks": 0.015312580937580936,
+      "class": "DRIFT_NONE"
+    },
+    "fan_out": {
+      "psi": 2.5060747952173735e-05,
+      "ks": 0.0013073954435305346,
+      "class": "DRIFT_NONE"
+    },
+    "fan_in": {
+      "psi": 2.1989269284678366e-08,
+      "ks": 6.051247071364729e-05,
+      "class": "DRIFT_NONE"
+    },
+    "outgoing_bytes": {
+      "psi": 0.0070878083222273335,
+      "ks": 0.016929036999080105,
+      "class": "DRIFT_NONE"
+    },
+    "incoming_bytes": {
+      "psi": 0.0018706296550510808,
+      "ks": 0.015655795819229712,
+      "class": "DRIFT_NONE"
+    },
+    "new_outgoing_peers": {
+      "psi": 0.0,
+      "ks": 0.0004629583113777702,
+      "class": "DRIFT_NONE"
+    },
+    "new_incoming_peers": {
+      "psi": 0.0,
+      "ks": 0.0005497615411408363,
+      "class": "DRIFT_NONE"
+    },
+    "protocol_diversity": {
+      "psi": 0.00025142072316348084,
+      "ks": 0.004508148832861436,
+      "class": "DRIFT_NONE"
+    },
+    "port_diversity": {
+      "psi": 3.020945750682042e-11,
+      "ks": 0.0010121593365127746,
+      "class": "DRIFT_NONE"
+    },
+    "_overall": "DRIFT_NONE"
+  },
+  "perf_combined": {
+    "observations": 98747,
+    "elapsed_seconds": 48.29077099999995,
+    "obs_per_sec": 2044.8420672347538,
+    "peak_rss_mb": 3204.515625,
+    "edge_feature_ms": {
+      "count": 34,
+      "mean": 0.06292217592067521,
+      "p50": 0.0617920275125914,
+      "p95": 0.06982845983675973,
+      "p99": 0.07805094827265545,
+      "max": 0.07974791537540463
+    },
+    "edge_inference_ms": {
+      "count": 34,
+      "mean": 0.015286209180617842,
+      "p50": 0.014616325831641366,
+      "p95": 0.015692732736408116,
+      "p99": 0.028975434628743996,
+      "max": 0.03527371924204859
+    },
+    "node_feature_ms": {
+      "count": 51,
+      "mean": 0.04668279303034792,
+      "p50": 0.04597086208696853,
+      "p95": 0.049546062732131746,
+      "p99": 0.063315135726698,
+      "max": 0.07524079268389358
+    },
+    "node_inference_ms": {
+      "count": 51,
+      "mean": 0.007650812433902198,
+      "p50": 0.007308995612746678,
+      "p95": 0.008851471864740711,
+      "p99": 0.013397799950085793,
+      "max": 0.015578803022182989
+    },
+    "edge_windows": 67885,
+    "node_windows": 103680,
+    "state_db_mb": 8.56640625,
+    "sink_db_mb": 686.9609375
+  },
+  "perf_edge_only": {
+    "observations": 98747,
+    "elapsed_seconds": 17.823964791001345,
+    "obs_per_sec": 5540.1253962223755,
+    "peak_rss_mb": 3204.515625,
+    "edge_feature_ms": {
+      "count": 34,
+      "mean": 0.07223090613183152,
+      "p50": 0.05812169700979536,
+      "p95": 0.08276633970588411,
+      "p99": 0.34154031525442774,
+      "max": 0.4542726645517803
+    },
+    "edge_inference_ms": {
+      "count": 34,
+      "mean": 0.01486134856182812,
+      "p50": 0.014220098471611,
+      "p95": 0.01523093709285646,
+      "p99": 0.0281639593028609,
+      "max": 0.03453237306810199
+    },
+    "node_feature_ms": {},
+    "node_inference_ms": {},
+    "edge_windows": 67885,
+    "node_windows": 0,
+    "state_db_mb": 4.296875,
+    "sink_db_mb": 273.75
+  },
+  "thresholds": {
+    "edge": 0.315,
+    "node": 0.719
+  }
+}

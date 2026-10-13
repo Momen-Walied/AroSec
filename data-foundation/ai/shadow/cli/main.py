@@ -161,5 +161,64 @@ def report(input: Path = typer.Option(..., "--input"),
         console.print(md)
 
 
+@app.command("demo-combined")
+def demo_combined() -> None:
+    """Deterministic combined demo: same stream drives Edge AND Node independently."""
+    from datetime import UTC, datetime, timedelta
+
+    from ai.shadow.inference.node_bundle import load_node_scorer
+    from ai.shadow.runtime import ShadowRuntime
+    from ai.shadow.sinks.memory import InMemoryShadowSink
+    from ai.shadow.sources.list import ListObservationSource
+    from ai.shadow.state.memory import InMemoryStateStore
+    from src.schemas.v2 import CommunicationObservation
+
+    t0 = datetime(2024, 3, 2, 2, 13, 0, tzinfo=UTC)
+
+    def obs(win, src, dst, app, dport, k):
+        ws = t0 + timedelta(seconds=30 * win)
+        return CommunicationObservation(
+            observation_id=f"obs:demo-{k}", relationship_id=f"rel:{src}|{dst}|COMMUNICATES_WITH",
+            src_asset_id=src, dst_asset_id=dst, window_start=ws, window_end=ws + timedelta(seconds=30),
+            network_protocol="TCP", application_protocol=app, src_port=50000 + k, dst_port=dport,
+            connection_count=1, packet_count=10, bytes_out=640, bytes_in=600, dataset_source="synthetic")
+
+    cam = "asset:demo:cam-01"
+    obs_seq = [
+        obs(0, cam, "asset:demo:nvr-01", "RTSP", 554, 1),
+        obs(1, cam, "asset:demo:nvr-01", "RTSP", 554, 2),
+        obs(2, cam, "asset:demo:eng-01", "SMB", 445, 3),
+        obs(3, cam, "asset:demo:eng-02", "SMB", 445, 4),
+        obs(4, cam, "asset:demo:eng-03", "SMB", 445, 5),
+    ]
+    cfg = ShadowConfig(dataset_id="synthetic")
+    sink = InMemoryShadowSink()
+    runtime = ShadowRuntime(cfg, ListObservationSource(obs_seq), sink, InMemoryStateStore(),
+                            edge_bundle=ShadowModelBundle.load(cfg.model_bundle),
+                            node_scorer=load_node_scorer(cfg.node_model_artifact))
+    runtime.run()
+
+    edge_table = Table(title="EDGE pipeline — EdgeAnomalyResultV1")
+    for col in ("window", "relationship", "score", "severity", "reasons"):
+        edge_table.add_column(col)
+    for r in sorted(sink.edge_records(), key=lambda r: r.feature_window.window_start):
+        fw, ar = r.feature_window, r.anomaly_result
+        edge_table.add_row(fw.window_start.strftime("%H:%M:%S"),
+                           fw.src_asset_id.split(":")[-1] + "->" + fw.dst_asset_id.split(":")[-1],
+                           f"{ar.anomaly_score:.3f}", str(ar.severity),
+                           ",".join(x.code for x in ar.reasons[:3]))
+    node_table = Table(title="NODE pipeline — NodeAnomalyResultV1 (independent, no fusion)")
+    for col in ("window", "entity", "score", "severity", "reasons"):
+        node_table.add_column(col)
+    for r in sorted(sink.node_records(), key=lambda r: (r.feature_window.window_start, r.feature_window.asset_id)):
+        fw, ar = r.feature_window, r.anomaly_result
+        node_table.add_row(fw.window_start.strftime("%H:%M:%S"), fw.asset_id.split(":")[-1],
+                           f"{ar.anomaly_score:.3f}", str(ar.severity),
+                           ",".join(x.code for x in ar.reasons[:3]))
+    console.print(edge_table)
+    console.print(node_table)
+    console.print("[dim]Edge and Node scores are independent signals; no fusion is applied.[/dim]")
+
+
 if __name__ == "__main__":
     app()

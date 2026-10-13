@@ -19,6 +19,7 @@ Data Foundation v0.2 (Cyber Graph Data Contract):  FROZEN
 Edge Behavior Intelligence v1:                     COMPLETE
 Shadow Integration v1:                             COMPLETE / SHADOW-READY
 Node Behavior Intelligence v1:                     COMPLETE
+Node Shadow Integration v1:                        COMPLETE / SHADOW-READY
 ```
 
 - **Edge Behavior Intelligence v1** (`ai/edge_behavior/`) — leakage-safe edge-anomaly
@@ -36,10 +37,21 @@ Node Behavior Intelligence v1:                     COMPLETE
   This is **entity-behavior anomaly detection, not validated attack detection**; UNSW identity
   is `dataset_ip_fallback`. **Edge and Node models provide complementary signals**
   (window-level Pearson 0.085 / Spearman 0.108); **no Edge/Node fusion has been implemented**.
+- **Node Shadow Integration v1** (`ai/shadow/`) — the same event-time shadow runtime now drives
+  **two independent pipelines** (edge + node) with **exact online/offline parity** for both
+  (`NodeFeatureWindowV2` 0 mismatches / 103,680 windows; `EdgeFeatureWindowV2` 0 / 67,885).
+  Central `observation_id` idempotency, shared watermark/lateness, durable SQLite state +
+  restart recovery, drift monitoring, and separate edge/node shadow storage
+  (`intelligence_type=edge|node`). **No fusion; no remediation; fail-open.**
+- **Operational notes:** Edge and Node intelligence remain **independent**; **no score fusion
+  exists**; **signals are not incidents**. Edge threshold **0.315** and Node threshold **0.719**
+  remain **provisional**; UNSW identities remain **`dataset_ip_fallback`**. The combined durable
+  runtime sustains **≈2,045 observations/sec** in the current benchmark; Edge and Node signals
+  are **strongly complementary**; there is **no automatic remediation or retraining**.
 - Thresholds are **provisional**; **no automatic retraining**. Model binaries are
   regeneration-only.
 - Docs: `docs/AI_EDGE_BEHAVIOR_V1.md`, `docs/AI_SHADOW_INTEGRATION_V1.md`,
-  `docs/AI_NODE_BEHAVIOR_V1.md`.
+  `docs/AI_NODE_BEHAVIOR_V1.md`, `docs/AI_NODE_SHADOW_INTEGRATION_V1.md`.
 
 ## What is here
 

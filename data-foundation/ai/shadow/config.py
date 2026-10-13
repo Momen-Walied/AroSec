@@ -34,6 +34,11 @@ class ShadowConfig:
 
     feedback_path: Path = field(default_factory=lambda: PROJECT_ROOT / "ai" / "shadow" / "feedback.jsonl")
 
+    node_enabled: bool = True
+    node_model_artifact: Path = field(
+        default_factory=lambda: PROJECT_ROOT / "ai" / "node_behavior" / "artifacts" / "node_behavior" / "node-stat-v1")
+    node_threshold: float = 0.719  # provisional
+
     def __post_init__(self) -> None:
         if self.mode != "shadow":
             raise ValueError(f"only mode='shadow' is supported; got {self.mode!r}")

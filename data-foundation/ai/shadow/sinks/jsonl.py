@@ -1,9 +1,9 @@
-"""JSONL shadow sink (debugging / replay inspection)."""
+"""JSONL shadow sink (debugging / replay inspection). Stores edge and node records."""
 from __future__ import annotations
 
 from pathlib import Path
 
-from ai.contracts.shadow_records import ShadowInferenceRecordV1
+from ai.contracts.shadow_records import ShadowRecord
 from ai.shadow.sinks.base import ShadowSink
 
 
@@ -13,7 +13,7 @@ class JsonlShadowSink(ShadowSink):
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self._fh = open(self.path, "w", encoding="utf-8")
 
-    def write(self, record: ShadowInferenceRecordV1) -> None:
+    def write(self, record: ShadowRecord) -> None:
         self._fh.write(record.canonical_json() + "\n")
 
     def close(self) -> None:
