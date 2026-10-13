@@ -1,0 +1,45 @@
+# Edge Behavior Intelligence v1 — configuration
+random_seed: 42
+
+split:
+  train: 0.6
+  validation: 0.2
+  test: 0.2
+
+calibration:
+  # Operational target: fraction of NORMAL windows flagged. Threshold is derived
+  # from the VALIDATION score distribution at (1 - target_alert_rate).
+  target_alert_rate: 0.01
+  severity_quantiles:
+    INFO: 0.50
+    LOW: 0.75
+    MEDIUM: 0.90
+    HIGH: 0.98
+    CRITICAL: 0.999
+
+statistical:
+  z_clip: 5.0
+  components:
+    NEW_PEER:                 { weight: 0.25, features: [new_peer] }
+    PORT_NOVELTY:             { weight: 0.15, features: [port_novelty_count, log_unique_dst_ports] }
+    PROTOCOL_NOVELTY:         { weight: 0.15, features: [protocol_novelty_count, protocol_novelty_ratio, n_protocols] }
+    APP_PROTOCOL_NOVELTY:     { weight: 0.10, features: [app_protocol_novelty_count] }
+    TRAFFIC_VOLUME_DEVIATION: { weight: 0.15, features: [log_connections, log_packets, log_out_bytes, log_in_bytes, out_in_ratio] }
+    FAN_OUT_DEVIATION:        { weight: 0.15, features: [log_src_new_peers, fan_out_ratio, log_src_unique_peers] }
+    PORT_DIVERSITY:           { weight: 0.05, features: [port_entropy, port_wellknown_fraction, port_privileged_fraction] }
+
+isolation_forest:
+  n_estimators: 200
+  max_samples: 4096
+  contamination: auto
+
+autoencoder:
+  hidden: [16, 8, 4, 8, 16]
+  max_iter: 400
+  early_stopping: true
+
+fusion:
+  weights:
+    statistical: 0.40
+    isolation_forest: 0.30
+    autoencoder: 0.30

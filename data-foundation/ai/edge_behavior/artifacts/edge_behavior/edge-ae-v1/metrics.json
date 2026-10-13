@@ -1,0 +1,31 @@
+{
+  "normal_test": {
+    "rows": 13576,
+    "score_mean": 0.6788481760113276,
+    "score_p50": 0.6289224640480382,
+    "score_p90": 0.9299327563090958,
+    "score_p99": 0.9999999998505631,
+    "alerts": 80,
+    "alert_rate": 0.0058927519151443725,
+    "alerts_per_day": 12.606007550473272,
+    "alerts_per_asset_per_day": 1.8008582214961817,
+    "alerts_per_relationship_per_day": 0.2101001258412212
+  },
+  "calibration": {
+    "threshold": 1.0,
+    "target_alert_rate": 0.01,
+    "validation_alert_rate": 0.02106503645871695,
+    "severity_thresholds": {
+      "INFO": 0.0,
+      "LOW": 1.0,
+      "MEDIUM": 1.0,
+      "HIGH": 1.0,
+      "CRITICAL": 1.0
+    }
+  },
+  "performance": {
+    "inference_seconds_total": 0.0032788339995022397,
+    "inference_ms_per_row": 0.00024151694162509135,
+    "peak_memory_mb": 7.873456954956055
+  }
+}

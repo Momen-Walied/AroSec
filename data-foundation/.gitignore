@@ -47,6 +47,12 @@ venv/
 .mypy_cache/
 .ipynb_checkpoints/
 
+# === AI model binaries (regenerable; see docs/AI_EDGE_BEHAVIOR_V1.md) ===
+# Lightweight metadata (*.json) under artifacts/ IS tracked; binaries are not.
+*.joblib
+*.pkl
+*.onnx
+
 # === OS ===
 .DS_Store
 Thumbs.db

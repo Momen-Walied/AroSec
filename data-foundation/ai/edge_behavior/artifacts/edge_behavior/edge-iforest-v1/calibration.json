@@ -1,0 +1,12 @@
+{
+  "threshold": 0.7086881597057995,
+  "target_alert_rate": 0.01,
+  "validation_alert_rate": 0.010016940413935332,
+  "severity_thresholds": {
+    "INFO": 0.0,
+    "LOW": 0.7086881597057995,
+    "MEDIUM": 0.7209465681810916,
+    "HIGH": 0.7428974299291837,
+    "CRITICAL": 0.8037741404618994
+  }
+}

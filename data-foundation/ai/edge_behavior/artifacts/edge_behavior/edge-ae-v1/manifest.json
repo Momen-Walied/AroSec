@@ -1,0 +1,44 @@
+{
+  "model_version": "edge-ae-v1",
+  "dataset_id": "unsw_iotraffic",
+  "window": "30s",
+  "feature_schema_version": "edge_features_v1",
+  "split_boundaries": {
+    "time_col": "window_start",
+    "fractions": {
+      "train": 0.6,
+      "validation": 0.2,
+      "test": 0.2
+    },
+    "train": [
+      "2016-09-30T19:30:00+00:00",
+      "2016-10-19T15:45:00+00:00"
+    ],
+    "validation": [
+      "2016-10-19T15:45:30+00:00",
+      "2016-10-25T15:27:30+00:00"
+    ],
+    "test": [
+      "2016-10-25T15:28:00+00:00",
+      "2016-10-31T23:46:30+00:00"
+    ],
+    "n_total": 67885,
+    "n_train": 40732,
+    "n_validation": 13577,
+    "n_test": 13576
+  },
+  "train_time_range": [
+    "2016-09-30T19:30:00+00:00",
+    "2016-10-19T15:45:00+00:00"
+  ],
+  "validation_time_range": [
+    "2016-10-19T15:45:30+00:00",
+    "2016-10-25T15:27:30+00:00"
+  ],
+  "test_time_range": [
+    "2016-10-25T15:28:00+00:00",
+    "2016-10-31T23:46:30+00:00"
+  ],
+  "random_seed": 42,
+  "trained_at": "2026-10-13T08:07:36.057284+00:00"
+}

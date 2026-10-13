@@ -23,6 +23,8 @@ dependencies = [
 # Raw PCAP parsing is optional; the core pipeline works on CSV/flow/parquet.
 pcap = ["scapy>=2.5,<3"]
 graph = ["neo4j>=5.20,<6"]
+# AI Phase 1 (Edge Behavior Intelligence). CPU-only; no GPU/deep-learning frameworks.
+ai = ["scikit-learn>=1.4,<2", "matplotlib>=3.8,<4"]
 dev = [
     "pytest>=8.2,<9",
     "pytest-cov>=5,<7",
