@@ -224,6 +224,217 @@
       "random_seed": 42,
       "git_commit": "abebe68d20de726bd9e0aad066774a483ab849ab",
       "recorded_at": "2026-10-13T08:07:45.263925+00:00"
+    },
+    {
+      "experiment_id": "EXP-N-statistical",
+      "model_type": "node-stat-v1",
+      "dataset_version": "unsw_iotraffic:v0.2:30s",
+      "feature_schema_version": "node_features_v1",
+      "train_time_range": [
+        "2016-09-30T19:30:00+00:00",
+        "2016-10-19T15:45:00+00:00"
+      ],
+      "validation_time_range": [
+        "2016-10-19T15:45:30+00:00",
+        "2016-10-25T15:27:30+00:00"
+      ],
+      "test_time_range": [
+        "2016-10-25T15:28:00+00:00",
+        "2016-10-31T23:46:30+00:00"
+      ],
+      "hyperparameters": {
+        "model": "statistical",
+        "seed": 42
+      },
+      "metrics": {
+        "normal_test": {
+          "rows": 20634,
+          "score_mean": 0.29199243289321725,
+          "score_p50": 0.26827507354742475,
+          "score_p90": 0.5365501470948495,
+          "score_p99": 0.6934810049983032,
+          "alerts": 99,
+          "alert_rate": 0.00479790636813027,
+          "alerts_per_day": 15.599934343710673,
+          "alerts_per_entity_per_day": 0.28363516988564863,
+          "alerts_per_site_per_day": 15.599934343710673,
+          "entities": 55
+        },
+        "performance": {
+          "inference_seconds_total": 0.0016913330036913976,
+          "inference_ms_per_row": 8.196825645494803e-05,
+          "peak_memory_mb": 7.2427825927734375
+        }
+      },
+      "threshold": 0.719050362828292,
+      "artifact_path": "/Users/Me/Work/Arosec/data-foundation/ai/node_behavior/artifacts/node_behavior/node-stat-v1",
+      "artifact_size_bytes": 6877,
+      "random_seed": 42,
+      "git_commit": "e3b901eb1b0eeb29c4f7a02339e61dc3d1ce25ff",
+      "recorded_at": "2026-10-13T09:52:16.785802+00:00"
+    },
+    {
+      "experiment_id": "EXP-N-isolation_forest",
+      "model_type": "node-iforest-v1",
+      "dataset_version": "unsw_iotraffic:v0.2:30s",
+      "feature_schema_version": "node_features_v1",
+      "train_time_range": [
+        "2016-09-30T19:30:00+00:00",
+        "2016-10-19T15:45:00+00:00"
+      ],
+      "validation_time_range": [
+        "2016-10-19T15:45:30+00:00",
+        "2016-10-25T15:27:30+00:00"
+      ],
+      "test_time_range": [
+        "2016-10-25T15:28:00+00:00",
+        "2016-10-31T23:46:30+00:00"
+      ],
+      "hyperparameters": {
+        "model": "isolation_forest",
+        "seed": 42
+      },
+      "metrics": {
+        "normal_test": {
+          "rows": 20634,
+          "score_mean": 0.5554330820992923,
+          "score_p50": 0.4934762435905444,
+          "score_p90": 0.908188970720622,
+          "score_p99": 0.974862701685331,
+          "alerts": 288,
+          "alert_rate": 0.01395754579819715,
+          "alerts_per_day": 45.38162718170378,
+          "alerts_per_entity_per_day": 0.825120494212796,
+          "alerts_per_site_per_day": 45.38162718170378,
+          "entities": 55
+        },
+        "performance": {
+          "inference_seconds_total": 0.10691891700116685,
+          "inference_ms_per_row": 0.005181686391449397,
+          "peak_memory_mb": 5.432577133178711
+        }
+      },
+      "threshold": 0.9690471046333178,
+      "artifact_path": "/Users/Me/Work/Arosec/data-foundation/ai/node_behavior/artifacts/node_behavior/node-iforest-v1",
+      "artifact_size_bytes": 4959614,
+      "random_seed": 42,
+      "git_commit": "e3b901eb1b0eeb29c4f7a02339e61dc3d1ce25ff",
+      "recorded_at": "2026-10-13T09:52:17.941236+00:00"
+    },
+    {
+      "experiment_id": "EXP-N-autoencoder",
+      "model_type": "node-ae-v1",
+      "dataset_version": "unsw_iotraffic:v0.2:30s",
+      "feature_schema_version": "node_features_v1",
+      "train_time_range": [
+        "2016-09-30T19:30:00+00:00",
+        "2016-10-19T15:45:00+00:00"
+      ],
+      "validation_time_range": [
+        "2016-10-19T15:45:30+00:00",
+        "2016-10-25T15:27:30+00:00"
+      ],
+      "test_time_range": [
+        "2016-10-25T15:28:00+00:00",
+        "2016-10-31T23:46:30+00:00"
+      ],
+      "hyperparameters": {
+        "model": "autoencoder",
+        "seed": 42
+      },
+      "metrics": {
+        "normal_test": {
+          "rows": 20634,
+          "score_mean": 0.5581731531881804,
+          "score_p50": 0.49483302615011987,
+          "score_p90": 0.7677329908997869,
+          "score_p99": 0.9906609395903905,
+          "alerts": 250,
+          "alert_rate": 0.012115925172046137,
+          "alerts_per_day": 39.39377359522898,
+          "alerts_per_entity_per_day": 0.7162504290041632,
+          "alerts_per_site_per_day": 39.39377359522898,
+          "entities": 55
+        },
+        "performance": {
+          "inference_seconds_total": 0.003910250001354143,
+          "inference_ms_per_row": 0.0001895051856816004,
+          "peak_memory_mb": 10.926565170288086
+        }
+      },
+      "threshold": 0.9839519348806074,
+      "artifact_path": "/Users/Me/Work/Arosec/data-foundation/ai/node_behavior/artifacts/node_behavior/node-ae-v1",
+      "artifact_size_bytes": 41993,
+      "random_seed": 42,
+      "git_commit": "e3b901eb1b0eeb29c4f7a02339e61dc3d1ce25ff",
+      "recorded_at": "2026-10-13T09:52:19.597446+00:00"
+    },
+    {
+      "experiment_id": "EXP-N-001..004",
+      "model_type": "node_behavior_v1_suite",
+      "dataset_version": "unsw_iotraffic:v0.2:30s",
+      "feature_schema_version": "node_features_v1",
+      "train_time_range": [
+        "2016-09-30T19:30:00+00:00",
+        "2016-10-19T15:45:00+00:00"
+      ],
+      "validation_time_range": [
+        "2016-10-19T15:45:30+00:00",
+        "2016-10-25T15:27:30+00:00"
+      ],
+      "test_time_range": [
+        "2016-10-25T15:28:00+00:00",
+        "2016-10-31T23:46:30+00:00"
+      ],
+      "metrics": {
+        "statistical": {
+          "rows": 20634,
+          "score_mean": 0.29199243289321725,
+          "score_p50": 0.26827507354742475,
+          "score_p90": 0.5365501470948495,
+          "score_p99": 0.6934810049983032,
+          "alerts": 99,
+          "alert_rate": 0.00479790636813027,
+          "alerts_per_day": 15.599934343710673,
+          "alerts_per_entity_per_day": 0.28363516988564863,
+          "alerts_per_site_per_day": 15.599934343710673,
+          "entities": 55
+        },
+        "isolation_forest": {
+          "rows": 20634,
+          "score_mean": 0.5554330820992923,
+          "score_p50": 0.4934762435905444,
+          "score_p90": 0.908188970720622,
+          "score_p99": 0.974862701685331,
+          "alerts": 288,
+          "alert_rate": 0.01395754579819715,
+          "alerts_per_day": 45.38162718170378,
+          "alerts_per_entity_per_day": 0.825120494212796,
+          "alerts_per_site_per_day": 45.38162718170378,
+          "entities": 55
+        },
+        "autoencoder": {
+          "rows": 20634,
+          "score_mean": 0.5581731531881804,
+          "score_p50": 0.49483302615011987,
+          "score_p90": 0.7677329908997869,
+          "score_p99": 0.9906609395903905,
+          "alerts": 250,
+          "alert_rate": 0.012115925172046137,
+          "alerts_per_day": 39.39377359522898,
+          "alerts_per_entity_per_day": 0.7162504290041632,
+          "alerts_per_site_per_day": 39.39377359522898,
+          "entities": 55
+        }
+      },
+      "threshold": {
+        "statistical": 0.719050362828292,
+        "isolation_forest": 0.9690471046333178,
+        "autoencoder": 0.9839519348806074
+      },
+      "random_seed": 42,
+      "git_commit": "e3b901eb1b0eeb29c4f7a02339e61dc3d1ce25ff",
+      "recorded_at": "2026-10-13T09:52:21.511865+00:00"
     }
   ]
 }

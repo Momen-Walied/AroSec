@@ -18,6 +18,7 @@ Its job is to give the Network Team, AI Team, and future Graph Intelligence comp
 Data Foundation v0.2 (Cyber Graph Data Contract):  FROZEN
 Edge Behavior Intelligence v1:                     COMPLETE
 Shadow Integration v1:                             COMPLETE / SHADOW-READY
+Node Behavior Intelligence v1:                     COMPLETE
 ```
 
 - **Edge Behavior Intelligence v1** (`ai/edge_behavior/`) — leakage-safe edge-anomaly
@@ -28,9 +29,17 @@ Shadow Integration v1:                             COMPLETE / SHADOW-READY
   with **exact online/offline feature parity** (0 mismatches / 67,885 windows), idempotent
   processing, durable SQLite state + restart recovery, drift monitoring, and an analyst
   feedback contract. **Shadow-only, read-only, fail-open — no remediation.**
-- Threshold **0.315 is provisional**; **no automatic retraining**. Model binaries are
+- **Node Behavior Intelligence v1** (`ai/node_behavior/`) — bidirectional
+  `NodeFeatureWindowV2` (inbound + outbound) entity-behavior anomaly detection. Selected
+  model: **interpretable Statistical Node model**; Isolation Forest retained as
+  research/reference; **Autoencoder rejected**. Proposed threshold **0.719 is provisional**.
+  This is **entity-behavior anomaly detection, not validated attack detection**; UNSW identity
+  is `dataset_ip_fallback`. **Edge and Node models provide complementary signals**
+  (window-level Pearson 0.085 / Spearman 0.108); **no Edge/Node fusion has been implemented**.
+- Thresholds are **provisional**; **no automatic retraining**. Model binaries are
   regeneration-only.
-- Docs: `docs/AI_EDGE_BEHAVIOR_V1.md`, `docs/AI_SHADOW_INTEGRATION_V1.md`.
+- Docs: `docs/AI_EDGE_BEHAVIOR_V1.md`, `docs/AI_SHADOW_INTEGRATION_V1.md`,
+  `docs/AI_NODE_BEHAVIOR_V1.md`.
 
 ## What is here
 

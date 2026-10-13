@@ -1,0 +1,20 @@
+{
+  "model_version": "node-iforest-v1",
+  "dataset_id": "unsw_iotraffic",
+  "window": "30s",
+  "feature_schema_version": "node_features_v1",
+  "train_time_range": [
+    "2016-09-30T19:30:00+00:00",
+    "2016-10-19T15:45:00+00:00"
+  ],
+  "validation_time_range": [
+    "2016-10-19T15:45:30+00:00",
+    "2016-10-25T15:27:30+00:00"
+  ],
+  "test_time_range": [
+    "2016-10-25T15:28:00+00:00",
+    "2016-10-31T23:46:30+00:00"
+  ],
+  "random_seed": 42,
+  "trained_at": "2026-10-13T09:52:17.914815+00:00"
+}

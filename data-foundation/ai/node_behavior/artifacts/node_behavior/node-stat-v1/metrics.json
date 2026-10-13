@@ -1,0 +1,32 @@
+{
+  "normal_test": {
+    "rows": 20634,
+    "score_mean": 0.29199243289321725,
+    "score_p50": 0.26827507354742475,
+    "score_p90": 0.5365501470948495,
+    "score_p99": 0.6934810049983032,
+    "alerts": 99,
+    "alert_rate": 0.00479790636813027,
+    "alerts_per_day": 15.599934343710673,
+    "alerts_per_entity_per_day": 0.28363516988564863,
+    "alerts_per_site_per_day": 15.599934343710673,
+    "entities": 55
+  },
+  "calibration": {
+    "threshold": 0.719050362828292,
+    "target_alert_rate": 0.01,
+    "validation_alert_rate": 0.010947673016638534,
+    "severity_thresholds": {
+      "INFO": 0.0,
+      "LOW": 0.719050362828292,
+      "MEDIUM": 0.8285755442424381,
+      "HIGH": 0.9333281438339414,
+      "CRITICAL": 0.9567117922663525
+    }
+  },
+  "performance": {
+    "inference_seconds_total": 0.0016913330036913976,
+    "inference_ms_per_row": 8.196825645494803e-05,
+    "peak_memory_mb": 7.2427825927734375
+  }
+}

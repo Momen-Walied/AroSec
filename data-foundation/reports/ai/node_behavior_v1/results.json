@@ -1,0 +1,521 @@
+{
+  "generated_at": "2026-10-13T09:52:21.480219+00:00",
+  "dataset_id": "unsw_iotraffic",
+  "window": "30s",
+  "boundaries": {
+    "time_col": "window_start",
+    "train": [
+      "2016-09-30T19:30:00+00:00",
+      "2016-10-19T15:45:00+00:00"
+    ],
+    "validation": [
+      "2016-10-19T15:45:30+00:00",
+      "2016-10-25T15:27:30+00:00"
+    ],
+    "test": [
+      "2016-10-25T15:28:00+00:00",
+      "2016-10-31T23:46:30+00:00"
+    ],
+    "n_total": 103680,
+    "n_train": 62311,
+    "n_validation": 20735,
+    "n_test": 20634
+  },
+  "_feature_columns": [
+    "log_out_conn",
+    "log_out_bytes",
+    "log_out_packets",
+    "log_in_conn",
+    "log_in_bytes",
+    "log_in_packets",
+    "out_in_conn_ratio",
+    "out_in_bytes_ratio",
+    "log_out_peers",
+    "log_in_peers",
+    "log_fan_out",
+    "log_fan_in",
+    "log_new_out_peers",
+    "log_new_in_peers",
+    "peer_set_change_rate",
+    "log_rel_creation",
+    "log_out_ports",
+    "log_in_ports",
+    "log_port_novelty",
+    "out_protocols",
+    "in_protocols",
+    "protocol_novelty_count",
+    "app_protocol_diversity"
+  ],
+  "models": {
+    "statistical": {
+      "model_version": "node-stat-v1",
+      "threshold": 0.719050362828292,
+      "calibration": {
+        "threshold": 0.719050362828292,
+        "target_alert_rate": 0.01,
+        "validation_alert_rate": 0.010947673016638534,
+        "severity_thresholds": {
+          "INFO": 0.0,
+          "LOW": 0.719050362828292,
+          "MEDIUM": 0.8285755442424381,
+          "HIGH": 0.9333281438339414,
+          "CRITICAL": 0.9567117922663525
+        }
+      },
+      "normal_test": {
+        "rows": 20634,
+        "score_mean": 0.29199243289321725,
+        "score_p50": 0.26827507354742475,
+        "score_p90": 0.5365501470948495,
+        "score_p99": 0.6934810049983032,
+        "alerts": 99,
+        "alert_rate": 0.00479790636813027,
+        "alerts_per_day": 15.599934343710673,
+        "alerts_per_entity_per_day": 0.28363516988564863,
+        "alerts_per_site_per_day": 15.599934343710673,
+        "entities": 55
+      },
+      "performance": {
+        "inference_seconds_total": 0.0016913330036913976,
+        "inference_ms_per_row": 8.196825645494803e-05,
+        "peak_memory_mb": 7.2427825927734375
+      },
+      "artifact_dir": "/Users/Me/Work/Arosec/data-foundation/ai/node_behavior/artifacts/node_behavior/node-stat-v1",
+      "artifact_size_bytes": 6877,
+      "scenario": {
+        "SCN-N01_NEW_PEER_BURST": {
+          "detection_rate": 1.0,
+          "median_score": 1.0
+        },
+        "SCN-N02_FAN_OUT_BURST": {
+          "detection_rate": 1.0,
+          "median_score": 1.0
+        },
+        "SCN-N03_PROTOCOL_SHIFT": {
+          "detection_rate": 0.12,
+          "median_score": 0.47749743384448234
+        },
+        "SCN-N04_PORT_DIVERSITY_BURST": {
+          "detection_rate": 0.48,
+          "median_score": 0.6666666666666666
+        },
+        "SCN-N05_OUTBOUND_VOLUME_SPIKE": {
+          "detection_rate": 0.9633333333333334,
+          "median_score": 0.8788948756210829
+        },
+        "SCN-N06_PEER_SET_REPLACEMENT": {
+          "detection_rate": 1.0,
+          "median_score": 1.0
+        },
+        "SCN-N07_INBOUND_TARGETING": {
+          "detection_rate": 1.0,
+          "median_score": 1.0
+        },
+        "SCN-N08_COMPOUND": {
+          "detection_rate": 1.0,
+          "median_score": 1.0
+        }
+      },
+      "alerts": {
+        "rows": 20634,
+        "alerts": 99,
+        "alert_rate": 0.00479790636813027,
+        "span_days": 6.346180555555556,
+        "alerts_per_day": 15.599934343710673,
+        "alerts_per_entity_per_day": 0.28363516988564863,
+        "alerts_per_site_per_day": 15.599934343710673
+      },
+      "score_drift": {
+        "mean_of_daily_mean": 0.2916502269040821,
+        "std_of_daily_mean": 0.009026594926436432,
+        "max_daily_alert_rate": 0.01549529607083564
+      }
+    },
+    "isolation_forest": {
+      "model_version": "node-iforest-v1",
+      "threshold": 0.9690471046333178,
+      "calibration": {
+        "threshold": 0.9690471046333178,
+        "target_alert_rate": 0.01,
+        "validation_alert_rate": 0.010031347962382446,
+        "severity_thresholds": {
+          "INFO": 0.0,
+          "LOW": 0.9690471046333178,
+          "MEDIUM": 0.9776931137546931,
+          "HIGH": 0.986058896119007,
+          "CRITICAL": 0.9929946230008991
+        }
+      },
+      "normal_test": {
+        "rows": 20634,
+        "score_mean": 0.5554330820992923,
+        "score_p50": 0.4934762435905444,
+        "score_p90": 0.908188970720622,
+        "score_p99": 0.974862701685331,
+        "alerts": 288,
+        "alert_rate": 0.01395754579819715,
+        "alerts_per_day": 45.38162718170378,
+        "alerts_per_entity_per_day": 0.825120494212796,
+        "alerts_per_site_per_day": 45.38162718170378,
+        "entities": 55
+      },
+      "performance": {
+        "inference_seconds_total": 0.10691891700116685,
+        "inference_ms_per_row": 0.005181686391449397,
+        "peak_memory_mb": 5.432577133178711
+      },
+      "artifact_dir": "/Users/Me/Work/Arosec/data-foundation/ai/node_behavior/artifacts/node_behavior/node-iforest-v1",
+      "artifact_size_bytes": 4959614,
+      "scenario": {
+        "SCN-N01_NEW_PEER_BURST": {
+          "detection_rate": 0.7966666666666666,
+          "median_score": 0.9775439570575165
+        },
+        "SCN-N02_FAN_OUT_BURST": {
+          "detection_rate": 0.4266666666666667,
+          "median_score": 0.9636445560247477
+        },
+        "SCN-N03_PROTOCOL_SHIFT": {
+          "detection_rate": 0.1,
+          "median_score": 0.8941624285530108
+        },
+        "SCN-N04_PORT_DIVERSITY_BURST": {
+          "detection_rate": 0.10666666666666667,
+          "median_score": 0.9061271138049892
+        },
+        "SCN-N05_OUTBOUND_VOLUME_SPIKE": {
+          "detection_rate": 0.7333333333333333,
+          "median_score": 0.9762695565184193
+        },
+        "SCN-N06_PEER_SET_REPLACEMENT": {
+          "detection_rate": 0.22666666666666666,
+          "median_score": 0.9497135209914268
+        },
+        "SCN-N07_INBOUND_TARGETING": {
+          "detection_rate": 0.37333333333333335,
+          "median_score": 0.957873262538727
+        },
+        "SCN-N08_COMPOUND": {
+          "detection_rate": 1.0,
+          "median_score": 0.9983079117528563
+        }
+      },
+      "alerts": {
+        "rows": 20634,
+        "alerts": 288,
+        "alert_rate": 0.01395754579819715,
+        "span_days": 6.346180555555556,
+        "alerts_per_day": 45.38162718170378,
+        "alerts_per_entity_per_day": 0.825120494212796,
+        "alerts_per_site_per_day": 45.38162718170378
+      },
+      "score_drift": {
+        "mean_of_daily_mean": 0.55392056589569,
+        "std_of_daily_mean": 0.015097489804126169,
+        "max_daily_alert_rate": 0.04537908135030437
+      }
+    },
+    "autoencoder": {
+      "model_version": "node-ae-v1",
+      "threshold": 0.9839519348806074,
+      "calibration": {
+        "threshold": 0.9839519348806074,
+        "target_alert_rate": 0.01,
+        "validation_alert_rate": 0.010031347962382446,
+        "severity_thresholds": {
+          "INFO": 0.0,
+          "LOW": 0.9839519348806074,
+          "MEDIUM": 0.994620689893842,
+          "HIGH": 0.9980464561007139,
+          "CRITICAL": 0.9997109317892452
+        }
+      },
+      "normal_test": {
+        "rows": 20634,
+        "score_mean": 0.5581731531881804,
+        "score_p50": 0.49483302615011987,
+        "score_p90": 0.7677329908997869,
+        "score_p99": 0.9906609395903905,
+        "alerts": 250,
+        "alert_rate": 0.012115925172046137,
+        "alerts_per_day": 39.39377359522898,
+        "alerts_per_entity_per_day": 0.7162504290041632,
+        "alerts_per_site_per_day": 39.39377359522898,
+        "entities": 55
+      },
+      "performance": {
+        "inference_seconds_total": 0.003910250001354143,
+        "inference_ms_per_row": 0.0001895051856816004,
+        "peak_memory_mb": 10.926565170288086
+      },
+      "artifact_dir": "/Users/Me/Work/Arosec/data-foundation/ai/node_behavior/artifacts/node_behavior/node-ae-v1",
+      "artifact_size_bytes": 41993,
+      "scenario": {
+        "SCN-N01_NEW_PEER_BURST": {
+          "detection_rate": 1.0,
+          "median_score": 0.9999981005491073
+        },
+        "SCN-N02_FAN_OUT_BURST": {
+          "detection_rate": 1.0,
+          "median_score": 0.9999897558911571
+        },
+        "SCN-N03_PROTOCOL_SHIFT": {
+          "detection_rate": 0.13666666666666666,
+          "median_score": 0.9285167918065576
+        },
+        "SCN-N04_PORT_DIVERSITY_BURST": {
+          "detection_rate": 1.0,
+          "median_score": 0.9998747333877857
+        },
+        "SCN-N05_OUTBOUND_VOLUME_SPIKE": {
+          "detection_rate": 0.6433333333333333,
+          "median_score": 0.993820439797337
+        },
+        "SCN-N06_PEER_SET_REPLACEMENT": {
+          "detection_rate": 0.013333333333333334,
+          "median_score": 0.6366348160238893
+        },
+        "SCN-N07_INBOUND_TARGETING": {
+          "detection_rate": 1.0,
+          "median_score": 0.9999984143200491
+        },
+        "SCN-N08_COMPOUND": {
+          "detection_rate": 1.0,
+          "median_score": 0.9999999999759255
+        }
+      },
+      "alerts": {
+        "rows": 20634,
+        "alerts": 250,
+        "alert_rate": 0.012115925172046137,
+        "span_days": 6.346180555555556,
+        "alerts_per_day": 39.39377359522898,
+        "alerts_per_entity_per_day": 0.7162504290041632,
+        "alerts_per_site_per_day": 39.39377359522898
+      },
+      "score_drift": {
+        "mean_of_daily_mean": 0.5578217549322094,
+        "std_of_daily_mean": 0.007902226834628216,
+        "max_daily_alert_rate": 0.03320420586607637
+      }
+    }
+  },
+  "correlation": {
+    "windows": 7061,
+    "pearson": 0.08463987690120106,
+    "spearman": 0.10782061067375263,
+    "pct_high_node_with_high_edge": 0.25,
+    "pct_high_edge_while_node_normal": 0.9783599088838268,
+    "pct_high_node_while_edge_normal": 0.75
+  },
+  "alignment": {
+    "edge_high_windows": 878,
+    "node_high_windows": 76,
+    "overlap_windows": 19,
+    "edge_only_windows": 859,
+    "node_only_windows": 57
+  },
+  "edge_vs_node": {
+    "thresholds": {
+      "node": 0.719050362828292,
+      "edge": 0.06408143598399238
+    },
+    "comparison": {
+      "SCN-N01_NEW_PEER_BURST": {
+        "node_detection": 1.0,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-001_NEW_PEER"
+      },
+      "SCN-N02_FAN_OUT_BURST": {
+        "node_detection": 1.0,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-004_FAN_OUT_BURST"
+      },
+      "SCN-N03_PROTOCOL_SHIFT": {
+        "node_detection": 0.12666666666666668,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-003_NEW_PROTOCOL"
+      },
+      "SCN-N04_PORT_DIVERSITY_BURST": {
+        "node_detection": 0.4666666666666667,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-002_NEW_PORT"
+      },
+      "SCN-N05_OUTBOUND_VOLUME_SPIKE": {
+        "node_detection": 0.93,
+        "edge_detection": 0.62,
+        "edge_scenario": "SCN-005_TRAFFIC_VOLUME_SPIKE"
+      },
+      "SCN-N06_PEER_SET_REPLACEMENT": {
+        "node_detection": 1.0,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-001_NEW_PEER"
+      },
+      "SCN-N07_INBOUND_TARGETING": {
+        "node_detection": 1.0,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-001_NEW_PEER"
+      },
+      "SCN-N08_COMPOUND": {
+        "node_detection": 1.0,
+        "edge_detection": 1.0,
+        "edge_scenario": "SCN-006_COMPOUND"
+      }
+    }
+  },
+  "stability_tables": {
+    "statistical": [
+      {
+        "date": "2016-10-25",
+        "rows": 1211,
+        "alerts": 9,
+        "score_mean": 0.2929784176170482,
+        "alert_rate": 0.007431874483897605
+      },
+      {
+        "date": "2016-10-26",
+        "rows": 3345,
+        "alerts": 20,
+        "score_mean": 0.29165232313756534,
+        "alert_rate": 0.005979073243647235
+      },
+      {
+        "date": "2016-10-27",
+        "rows": 3614,
+        "alerts": 56,
+        "score_mean": 0.31206298166623625,
+        "alert_rate": 0.01549529607083564
+      },
+      {
+        "date": "2016-10-28",
+        "rows": 3143,
+        "alerts": 6,
+        "score_mean": 0.28384688143314896,
+        "alert_rate": 0.0019090041361756285
+      },
+      {
+        "date": "2016-10-29",
+        "rows": 3163,
+        "alerts": 3,
+        "score_mean": 0.28490929684019095,
+        "alert_rate": 0.0009484666455896301
+      },
+      {
+        "date": "2016-10-30",
+        "rows": 3029,
+        "alerts": 1,
+        "score_mean": 0.2911867491043743,
+        "alert_rate": 0.0003301419610432486
+      },
+      {
+        "date": "2016-10-31",
+        "rows": 3129,
+        "alerts": 4,
+        "score_mean": 0.28491493853001093,
+        "alert_rate": 0.001278363694471077
+      }
+    ],
+    "isolation_forest": [
+      {
+        "date": "2016-10-25",
+        "rows": 1211,
+        "alerts": 11,
+        "score_mean": 0.5357478330300856,
+        "alert_rate": 0.009083402146985962
+      },
+      {
+        "date": "2016-10-26",
+        "rows": 3345,
+        "alerts": 28,
+        "score_mean": 0.5279986194877828,
+        "alert_rate": 0.00837070254110613
+      },
+      {
+        "date": "2016-10-27",
+        "rows": 3614,
+        "alerts": 164,
+        "score_mean": 0.5615783370410574,
+        "alert_rate": 0.04537908135030437
+      },
+      {
+        "date": "2016-10-28",
+        "rows": 3143,
+        "alerts": 20,
+        "score_mean": 0.5647523554705997,
+        "alert_rate": 0.006363347120585428
+      },
+      {
+        "date": "2016-10-29",
+        "rows": 3163,
+        "alerts": 25,
+        "score_mean": 0.556633594601936,
+        "alert_rate": 0.007903888713246918
+      },
+      {
+        "date": "2016-10-30",
+        "rows": 3029,
+        "alerts": 23,
+        "score_mean": 0.573968654921276,
+        "alert_rate": 0.0075932651039947174
+      },
+      {
+        "date": "2016-10-31",
+        "rows": 3129,
+        "alerts": 17,
+        "score_mean": 0.5567645667170933,
+        "alert_rate": 0.005433045701502077
+      }
+    ],
+    "autoencoder": [
+      {
+        "date": "2016-10-25",
+        "rows": 1211,
+        "alerts": 10,
+        "score_mean": 0.5583246830229978,
+        "alert_rate": 0.008257638315441783
+      },
+      {
+        "date": "2016-10-26",
+        "rows": 3345,
+        "alerts": 26,
+        "score_mean": 0.5541351435955741,
+        "alert_rate": 0.007772795216741405
+      },
+      {
+        "date": "2016-10-27",
+        "rows": 3614,
+        "alerts": 120,
+        "score_mean": 0.5765415488288699,
+        "alert_rate": 0.03320420586607637
+      },
+      {
+        "date": "2016-10-28",
+        "rows": 3143,
+        "alerts": 25,
+        "score_mean": 0.5527458513485535,
+        "alert_rate": 0.007954183900731784
+      },
+      {
+        "date": "2016-10-29",
+        "rows": 3163,
+        "alerts": 24,
+        "score_mean": 0.5543796739591197,
+        "alert_rate": 0.0075877331647170405
+      },
+      {
+        "date": "2016-10-30",
+        "rows": 3029,
+        "alerts": 23,
+        "score_mean": 0.5566150638929173,
+        "alert_rate": 0.0075932651039947174
+      },
+      {
+        "date": "2016-10-31",
+        "rows": 3129,
+        "alerts": 22,
+        "score_mean": 0.552010319877433,
+        "alert_rate": 0.007031000319590924
+      }
+    ]
+  }
+}
