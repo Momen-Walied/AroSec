@@ -205,8 +205,7 @@ class ShadowRuntime:
         try:
             frame = build_node_feature_matrix(windows)
             X = frame[NODE_FEATURE_COLUMNS].to_numpy(dtype=float)
-            by_key = {(pd.Timestamp(frame.iloc[i]["window_start"]).isoformat(), str(frame.iloc[i]["asset_id"])): windows[i]
-                      for i in range(len(frame))}
+            w_by_key = {(w.window_start.isoformat(), w.asset_id): w for w in windows}
             n = max(len(windows), 1)
             self.metrics.observe("node_feature_build_latency_ms", (time.perf_counter() - t0) * 1000.0 / n)
             it0 = time.perf_counter()
@@ -216,7 +215,7 @@ class ShadowRuntime:
             now = datetime.now(UTC)
             for i in range(len(frame)):
                 key = (pd.Timestamp(frame.iloc[i]["window_start"]).isoformat(), str(frame.iloc[i]["asset_id"]))
-                self._emit_node(by_key[key], float(scores[i]), reasons_list[i], feats_list[i], now)
+                self._emit_node(w_by_key[key], float(scores[i]), reasons_list[i], feats_list[i], now)
         except Exception:  # noqa: BLE001
             self.metrics.inc("node_inference_errors_total")
 

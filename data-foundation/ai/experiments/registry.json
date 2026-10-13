@@ -7,26 +7,12 @@
       "validation_time_range": null,
       "metrics": {
         "total_signals": 1235,
-        "episodes_default_gap": 857,
-        "compression_default_gap": 1.441073512252042
+        "episodes_default_gap": 633,
+        "compression_default_gap": 1.9510268562401263
       },
       "random_seed": 42,
-      "git_commit": "d5fb2bbfa24fdc13239b484b36c7845f888184e0",
-      "recorded_at": "2026-10-13T10:36:59.521853+00:00"
-    },
-    {
-      "experiment_id": "EXP-E01..E07",
-      "model_type": "behavioral_episode_v1",
-      "dataset_version": "unsw_iotraffic:v0.2:30s",
-      "validation_time_range": null,
-      "metrics": {
-        "total_signals": 1235,
-        "episodes_default_gap": 857,
-        "compression_default_gap": 1.441073512252042
-      },
-      "random_seed": 42,
-      "git_commit": "d5fb2bbfa24fdc13239b484b36c7845f888184e0",
-      "recorded_at": "2026-10-13T10:37:27.977001+00:00"
+      "git_commit": "f08538a0ec61ac350f660dc5c8d2bb1de8d466e1",
+      "recorded_at": "2026-10-13T12:26:58.743706+00:00"
     }
   ]
 }

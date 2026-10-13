@@ -62,13 +62,13 @@ evidence. Neither is an attack probability.
 | edge signals | 566 |
 | node signals | 669 |
 | total signals | 1,235 |
-| episodes | 857 |
-| episodes/site/day | 27.5 |
-| signal compression ratio | 1.44 |
-| signals/episode mean / median / p95 | 1.44 / 1.0 / 2.0 |
-| edge-only / node-only / mixed | 38.6% / 59.3% / 2.1% |
-| evidence strength | WEAK 787 · MODERATE 52 · STRONG 18 |
-| severity | CRITICAL 173 · HIGH 50 · MEDIUM 241 · LOW 391 · INFO 2 |
+| episodes | 633 |
+| episodes/site/day | 20.3 |
+| signal compression ratio | 1.95 |
+| signals/episode mean / median / p95 | 1.95 / 1.0 / 5.0 |
+| edge-only / node-only / mixed | 34.9% / 45.8% / 19.3% |
+| evidence strength | WEAK 478 · MODERATE 33 · STRONG 122 |
+| severity | CRITICAL 55 · HIGH 51 · MEDIUM 226 · LOW 299 · INFO 2 |
 | top evidence families | TRAFFIC_VOLUME 832 · PROTOCOL_CHANGE 738 · TOPOLOGY_SPREAD 711 · DIRECTIONAL_CHANGE 458 · PORT_CHANGE 424 · PEER_NOVELTY 160 · PEER_SET_CHANGE 70 |
 
 **Compression is modest on UNSW** because the dataset is mostly normal with sparse, largely
@@ -78,10 +78,10 @@ uncorrelated alerts (mean ≈1.4 signals/episode). Denser, related campaigns wou
 
 | gap (s) | episodes | episodes/day | compression | p95 duration (s) | mixed % |
 |---:|---:|---:|---:|---:|---:|
-| 30 | 894 | 28.7 | 1.38 | 60 | 2.0 |
-| 60 | 857 | 27.5 | 1.44 | 60 | 2.1 |
-| 120 | 838 | 26.9 | 1.47 | 60 | 2.1 |
-| 300 | 780 | 25.1 | 1.58 | 330 | 2.9 |
+| 30 | 651 | 20.9 | 1.90 | 90 | 18.9 |
+| 60 | 633 | 20.3 | 1.95 | 60 | 2.1 |
+| 120 | 599 | 19.2 | 2.06 | 180 | 20.5 |
+| 300 | 528 | 17.0 | 2.34 | 390 | 22.9 |
 
 Sensitivity is **mild** (episode count varies ~±7% across 30–300 s). Recommended default:
 **60 s** — balances temporal locality, coherence, and compression; 300 s raises p95 duration to
@@ -125,23 +125,23 @@ python -m pytest tests/ai/episodes -q
 1. **Edge signals?** 566.
 2. **Node signals?** 669.
 3. **Total signals?** **1,235**.
-4. **Behavioral Episodes?** **857** (gap 60 s).
-5. **Episodes/site/day?** 27.5.
-6. **Compression ratio?** **1.44**.
-7. **Median / p95 signals/episode?** 1.0 / 2.0.
+4. **Behavioral Episodes?** **633** (gap 60 s).
+5. **Episodes/site/day?** 20.3.
+6. **Compression ratio?** **1.95**.
+7. **Median / p95 signals/episode?** 1.0 / 5.0.
 8. **Median / p95 assets/episode?** 1.0 / 1.0 (most episodes are single-entity).
-9. **Edge-only %?** 38.6%.
-10. **Node-only %?** 59.3%.
-11. **Mixed Edge+Node %?** 2.1%.
+9. **Edge-only %?** 34.9%.
+10. **Node-only %?** 45.8%.
+11. **Mixed Edge+Node %?** 19.3%.
 12. **Recommended gap?** **60 s**.
 13. **Why?** Balances temporal locality, coherence, and compression; 300 s inflates p95
     duration to 330 s (over-merge risk) while 30 s over-fragments; all gaps give similar
     volume, so the more local default is preferred.
-14. **Sensitivity?** Mild — 894→780 episodes across 30→300 s (compression 1.38→1.58).
+14. **Sensitivity?** Mild — 651→528 episodes across 30→300 s (compression 1.90→2.34).
 15. **False merges?** **0** in deterministic synthetic tests.
 16. **Percolation bounded how?** `max_episode_duration_seconds` (600 s) caps extension from
     the start; SCN-E07 (13-signal chain over ~13 min) splits into 2 bounded episodes.
-17. **Evidence-strength distribution?** WEAK 787 · MODERATE 52 · STRONG 18.
+17. **Evidence-strength distribution?** WEAK 478 · MODERATE 33 · STRONG 122.
 18. **Most common families?** TRAFFIC_VOLUME, PROTOCOL_CHANGE, TOPOLOGY_SPREAD,
     DIRECTIONAL_CHANGE, PORT_CHANGE.
 19. **Throughput/latency?** **~72,600 signals/sec**, 0.0138 ms/signal (CPU).
@@ -160,3 +160,8 @@ python -m pytest tests/ai/episodes -q
 
 No fusion, GNN/Temporal GNN, attack-path, campaign reconstruction, attack taxonomy, or
 remediation. Nothing committed.
+
+> **Correction (Phase 3.5).** A node score→window attribution bug in batched node scoring
+> (fixed in Phase 3.5) changed the standalone reference from 857 to **633 episodes**; all
+> figures above reflect the corrected runtime. Full detail: `docs/AI_BEHAVIORAL_EPISODE_V1_ERRATA.md`.
+> The published tag `ai-behavioral-episode-v1` is immutable and is **not** moved or rewritten.

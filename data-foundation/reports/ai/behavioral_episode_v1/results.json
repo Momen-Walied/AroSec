@@ -14,359 +14,359 @@
   "gap_runs": {
     "30": {
       "metrics": {
-        "episodes": 894,
-        "episodes_per_site_per_day": 28.715523683124587,
+        "episodes": 651,
+        "episodes_per_site_per_day": 20.910297447107503,
         "duration_seconds": {
           "p50": 30.0,
-          "p90": 30.0,
-          "p95": 60.0,
-          "p99": 150.0
+          "p90": 60.0,
+          "p95": 90.0,
+          "p99": 330.0
         },
         "signals_per_episode": {
           "p50": 1.0,
-          "p90": 1.0,
-          "p95": 2.0,
-          "p99": 10.209999999999809
+          "p90": 3.0,
+          "p95": 4.0,
+          "p99": 24.5
         },
-        "mean_signals_per_episode": 1.3814317673378076,
+        "mean_signals_per_episode": 1.8970814132104454,
         "assets_per_episode": {
-          "p50": 1.0,
+          "p50": 2.0,
           "p90": 2.0,
           "p95": 3.0,
-          "p99": 5.0
+          "p99": 6.0
         },
         "relationships_per_episode": {
-          "p50": 0.0,
+          "p50": 1.0,
           "p90": 1.0,
           "p95": 2.0,
-          "p99": 4.0
+          "p99": 5.0
         },
-        "edge_only_pct": 0.39932885906040266,
-        "node_only_pct": 0.5805369127516778,
-        "mixed_pct": 0.020134228187919462,
+        "edge_only_pct": 0.3563748079877112,
+        "node_only_pct": 0.45468509984639016,
+        "mixed_pct": 0.1889400921658986,
         "evidence_strength_distribution": {
-          "STRONG": 18,
-          "WEAK": 821,
-          "MODERATE": 55
+          "STRONG": 123,
+          "WEAK": 494,
+          "MODERATE": 34
         },
         "severity_distribution": {
-          "CRITICAL": 174,
-          "MEDIUM": 256,
-          "LOW": 410,
+          "CRITICAL": 56,
+          "MEDIUM": 233,
+          "LOW": 308,
           "HIGH": 52,
           "INFO": 2
         },
         "top_evidence_families": [
           [
             "TRAFFIC_VOLUME",
-            865
+            648
           ],
           [
             "PROTOCOL_CHANGE",
-            756
+            609
           ],
           [
             "TOPOLOGY_SPREAD",
-            740
+            576
           ],
           [
             "DIRECTIONAL_CHANGE",
-            467
+            413
           ],
           [
             "PORT_CHANGE",
-            432
+            322
           ],
           [
             "PEER_NOVELTY",
-            162
+            43
           ],
           [
             "PEER_SET_CHANGE",
-            70
+            43
           ]
         ],
-        "episodes_with_gt1_asset": 375,
-        "episodes_with_gt1_relationship": 55
-      },
-      "compression": {
-        "raw_signals": 1235,
-        "episodes": 894,
-        "signal_compression_ratio": 1.3814317673378076,
-        "signals_per_day": 39.66853663160947,
-        "episodes_per_day": 28.715523683124587,
-        "mean_signals_per_episode": 1.3814317673378076,
-        "median_signals_per_episode": 1.0,
-        "p95_signals_per_episode": 2.0
-      },
-      "correlate_seconds": 0.018784917003358714
-    },
-    "60": {
-      "metrics": {
-        "episodes": 857,
-        "episodes_per_site_per_day": 27.527073597805114,
-        "duration_seconds": {
-          "p50": 30.0,
-          "p90": 30.0,
-          "p95": 60.0,
-          "p99": 313.1999999999982
-        },
-        "signals_per_episode": {
-          "p50": 1.0,
-          "p90": 1.0,
-          "p95": 2.0,
-          "p99": 10.43999999999994
-        },
-        "mean_signals_per_episode": 1.441073512252042,
-        "assets_per_episode": {
-          "p50": 1.0,
-          "p90": 2.0,
-          "p95": 3.0,
-          "p99": 5.439999999999941
-        },
-        "relationships_per_episode": {
-          "p50": 0.0,
-          "p90": 1.0,
-          "p95": 2.0,
-          "p99": 4.439999999999941
-        },
-        "edge_only_pct": 0.3862310385064177,
-        "node_only_pct": 0.5927654609101517,
-        "mixed_pct": 0.021003500583430573,
-        "evidence_strength_distribution": {
-          "STRONG": 18,
-          "MODERATE": 52,
-          "WEAK": 787
-        },
-        "severity_distribution": {
-          "CRITICAL": 173,
-          "MEDIUM": 241,
-          "LOW": 391,
-          "HIGH": 50,
-          "INFO": 2
-        },
-        "top_evidence_families": [
-          [
-            "TRAFFIC_VOLUME",
-            832
-          ],
-          [
-            "PROTOCOL_CHANGE",
-            738
-          ],
-          [
-            "TOPOLOGY_SPREAD",
-            711
-          ],
-          [
-            "DIRECTIONAL_CHANGE",
-            458
-          ],
-          [
-            "PORT_CHANGE",
-            424
-          ],
-          [
-            "PEER_NOVELTY",
-            160
-          ],
-          [
-            "PEER_SET_CHANGE",
-            70
-          ]
-        ],
-        "episodes_with_gt1_asset": 349,
+        "episodes_with_gt1_asset": 355,
         "episodes_with_gt1_relationship": 48
       },
       "compression": {
         "raw_signals": 1235,
-        "episodes": 857,
-        "signal_compression_ratio": 1.441073512252042,
+        "episodes": 651,
+        "signal_compression_ratio": 1.8970814132104454,
         "signals_per_day": 39.66853663160947,
-        "episodes_per_day": 27.527073597805114,
-        "mean_signals_per_episode": 1.441073512252042,
+        "episodes_per_day": 20.910297447107503,
+        "mean_signals_per_episode": 1.8970814132104454,
         "median_signals_per_episode": 1.0,
-        "p95_signals_per_episode": 2.0
+        "p95_signals_per_episode": 4.0
       },
-      "correlate_seconds": 0.017558583000209183
+      "correlate_seconds": 0.014012249994266313
     },
-    "120": {
+    "60": {
       "metrics": {
-        "episodes": 838,
-        "episodes_per_site_per_day": 26.916788418857276,
+        "episodes": 633,
+        "episodes_per_site_per_day": 20.332132540735866,
         "duration_seconds": {
           "p50": 30.0,
-          "p90": 30.0,
-          "p95": 60.0,
-          "p99": 468.89999999999986
+          "p90": 60.0,
+          "p95": 90.0,
+          "p99": 370.799999999997
         },
         "signals_per_episode": {
           "p50": 1.0,
-          "p90": 1.0,
-          "p95": 2.0,
-          "p99": 13.629999999999995
+          "p90": 3.0,
+          "p95": 5.0,
+          "p99": 24.3599999999999
         },
-        "mean_signals_per_episode": 1.473747016706444,
+        "mean_signals_per_episode": 1.9510268562401263,
         "assets_per_episode": {
-          "p50": 1.0,
-          "p90": 2.0,
-          "p95": 2.0,
-          "p99": 5.6299999999999955
-        },
-        "relationships_per_episode": {
-          "p50": 0.0,
-          "p90": 1.0,
-          "p95": 1.0,
-          "p99": 4.6299999999999955
-        },
-        "edge_only_pct": 0.37589498806682575,
-        "node_only_pct": 0.6026252983293556,
-        "mixed_pct": 0.021479713603818614,
-        "evidence_strength_distribution": {
-          "STRONG": 18,
-          "MODERATE": 49,
-          "WEAK": 771
-        },
-        "severity_distribution": {
-          "CRITICAL": 166,
-          "MEDIUM": 235,
-          "LOW": 385,
-          "HIGH": 50,
-          "INFO": 2
-        },
-        "top_evidence_families": [
-          [
-            "TRAFFIC_VOLUME",
-            814
-          ],
-          [
-            "PROTOCOL_CHANGE",
-            726
-          ],
-          [
-            "TOPOLOGY_SPREAD",
-            693
-          ],
-          [
-            "DIRECTIONAL_CHANGE",
-            455
-          ],
-          [
-            "PORT_CHANGE",
-            417
-          ],
-          [
-            "PEER_NOVELTY",
-            154
-          ],
-          [
-            "PEER_SET_CHANGE",
-            70
-          ]
-        ],
-        "episodes_with_gt1_asset": 333,
-        "episodes_with_gt1_relationship": 41
-      },
-      "compression": {
-        "raw_signals": 1235,
-        "episodes": 838,
-        "signal_compression_ratio": 1.473747016706444,
-        "signals_per_day": 39.66853663160947,
-        "episodes_per_day": 26.916788418857276,
-        "mean_signals_per_episode": 1.473747016706444,
-        "median_signals_per_episode": 1.0,
-        "p95_signals_per_episode": 2.0
-      },
-      "correlate_seconds": 0.01950083300471306
-    },
-    "300": {
-      "metrics": {
-        "episodes": 780,
-        "episodes_per_site_per_day": 25.05381260943756,
-        "duration_seconds": {
-          "p50": 30.0,
-          "p90": 90.0,
-          "p95": 330.0,
-          "p99": 630.0
-        },
-        "signals_per_episode": {
-          "p50": 1.0,
-          "p90": 2.0,
-          "p95": 3.0,
-          "p99": 14.210000000000036
-        },
-        "mean_signals_per_episode": 1.5833333333333333,
-        "assets_per_episode": {
-          "p50": 1.0,
+          "p50": 2.0,
           "p90": 2.0,
           "p95": 3.0,
           "p99": 6.0
         },
         "relationships_per_episode": {
-          "p50": 0.0,
+          "p50": 1.0,
           "p90": 1.0,
           "p95": 2.0,
           "p99": 5.0
         },
-        "edge_only_pct": 0.34487179487179487,
-        "node_only_pct": 0.6256410256410256,
-        "mixed_pct": 0.029487179487179487,
+        "edge_only_pct": 0.34913112164297,
+        "node_only_pct": 0.45813586097946285,
+        "mixed_pct": 0.19273301737756715,
         "evidence_strength_distribution": {
-          "STRONG": 23,
-          "MODERATE": 77,
-          "WEAK": 680
+          "STRONG": 122,
+          "WEAK": 478,
+          "MODERATE": 33
         },
         "severity_distribution": {
-          "CRITICAL": 156,
-          "HIGH": 47,
-          "LOW": 365,
-          "MEDIUM": 210,
+          "CRITICAL": 55,
+          "MEDIUM": 226,
+          "LOW": 299,
+          "HIGH": 51,
           "INFO": 2
         },
         "top_evidence_families": [
           [
             "TRAFFIC_VOLUME",
-            761
+            630
           ],
           [
             "PROTOCOL_CHANGE",
-            679
+            595
           ],
           [
             "TOPOLOGY_SPREAD",
-            649
+            566
           ],
           [
             "DIRECTIONAL_CHANGE",
-            449
+            406
           ],
           [
             "PORT_CHANGE",
-            404
+            317
           ],
           [
             "PEER_NOVELTY",
-            144
+            42
           ],
           [
             "PEER_SET_CHANGE",
-            68
+            42
           ]
         ],
-        "episodes_with_gt1_asset": 292,
-        "episodes_with_gt1_relationship": 46
+        "episodes_with_gt1_asset": 343,
+        "episodes_with_gt1_relationship": 48
       },
       "compression": {
         "raw_signals": 1235,
-        "episodes": 780,
-        "signal_compression_ratio": 1.5833333333333333,
+        "episodes": 633,
+        "signal_compression_ratio": 1.9510268562401263,
         "signals_per_day": 39.66853663160947,
-        "episodes_per_day": 25.05381260943756,
-        "mean_signals_per_episode": 1.5833333333333333,
+        "episodes_per_day": 20.332132540735866,
+        "mean_signals_per_episode": 1.9510268562401263,
         "median_signals_per_episode": 1.0,
-        "p95_signals_per_episode": 3.0
+        "p95_signals_per_episode": 5.0
       },
-      "correlate_seconds": 0.01681749999988824
+      "correlate_seconds": 0.012927083000249695
+    },
+    "120": {
+      "metrics": {
+        "episodes": 599,
+        "episodes_per_site_per_day": 19.240043273144998,
+        "duration_seconds": {
+          "p50": 30.0,
+          "p90": 90.0,
+          "p95": 180.0,
+          "p99": 571.1999999999989
+        },
+        "signals_per_episode": {
+          "p50": 1.0,
+          "p90": 3.0,
+          "p95": 4.100000000000023,
+          "p99": 25.059999999999945
+        },
+        "mean_signals_per_episode": 2.0617696160267114,
+        "assets_per_episode": {
+          "p50": 2.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "p99": 6.039999999999964
+        },
+        "relationships_per_episode": {
+          "p50": 1.0,
+          "p90": 1.0,
+          "p95": 2.0,
+          "p99": 5.039999999999964
+        },
+        "edge_only_pct": 0.34891485809682804,
+        "node_only_pct": 0.44574290484140233,
+        "mixed_pct": 0.20534223706176963,
+        "evidence_strength_distribution": {
+          "STRONG": 123,
+          "WEAK": 436,
+          "MODERATE": 40
+        },
+        "severity_distribution": {
+          "CRITICAL": 51,
+          "MEDIUM": 220,
+          "LOW": 275,
+          "HIGH": 51,
+          "INFO": 2
+        },
+        "top_evidence_families": [
+          [
+            "TRAFFIC_VOLUME",
+            596
+          ],
+          [
+            "PROTOCOL_CHANGE",
+            562
+          ],
+          [
+            "TOPOLOGY_SPREAD",
+            537
+          ],
+          [
+            "DIRECTIONAL_CHANGE",
+            384
+          ],
+          [
+            "PORT_CHANGE",
+            300
+          ],
+          [
+            "PEER_NOVELTY",
+            38
+          ],
+          [
+            "PEER_SET_CHANGE",
+            38
+          ]
+        ],
+        "episodes_with_gt1_asset": 332,
+        "episodes_with_gt1_relationship": 43
+      },
+      "compression": {
+        "raw_signals": 1235,
+        "episodes": 599,
+        "signal_compression_ratio": 2.0617696160267114,
+        "signals_per_day": 39.66853663160947,
+        "episodes_per_day": 19.240043273144998,
+        "mean_signals_per_episode": 2.0617696160267114,
+        "median_signals_per_episode": 1.0,
+        "p95_signals_per_episode": 4.100000000000023
+      },
+      "correlate_seconds": 0.01812945800338639
+    },
+    "300": {
+      "metrics": {
+        "episodes": 528,
+        "episodes_per_site_per_day": 16.959503920234656,
+        "duration_seconds": {
+          "p50": 30.0,
+          "p90": 249.00000000000034,
+          "p95": 390.0,
+          "p99": 630.0
+        },
+        "signals_per_episode": {
+          "p50": 1.0,
+          "p90": 3.0,
+          "p95": 6.0,
+          "p99": 27.460000000000036
+        },
+        "mean_signals_per_episode": 2.3390151515151514,
+        "assets_per_episode": {
+          "p50": 2.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "p99": 7.0
+        },
+        "relationships_per_episode": {
+          "p50": 1.0,
+          "p90": 1.0,
+          "p95": 2.0,
+          "p99": 6.0
+        },
+        "edge_only_pct": 0.32954545454545453,
+        "node_only_pct": 0.4412878787878788,
+        "mixed_pct": 0.22916666666666666,
+        "evidence_strength_distribution": {
+          "STRONG": 121,
+          "WEAK": 332,
+          "MODERATE": 75
+        },
+        "severity_distribution": {
+          "CRITICAL": 48,
+          "HIGH": 49,
+          "LOW": 235,
+          "MEDIUM": 194,
+          "INFO": 2
+        },
+        "top_evidence_families": [
+          [
+            "TRAFFIC_VOLUME",
+            527
+          ],
+          [
+            "PROTOCOL_CHANGE",
+            495
+          ],
+          [
+            "TOPOLOGY_SPREAD",
+            474
+          ],
+          [
+            "DIRECTIONAL_CHANGE",
+            351
+          ],
+          [
+            "PORT_CHANGE",
+            275
+          ],
+          [
+            "PEER_NOVELTY",
+            35
+          ],
+          [
+            "PEER_SET_CHANGE",
+            35
+          ]
+        ],
+        "episodes_with_gt1_asset": 295,
+        "episodes_with_gt1_relationship": 44
+      },
+      "compression": {
+        "raw_signals": 1235,
+        "episodes": 528,
+        "signal_compression_ratio": 2.3390151515151514,
+        "signals_per_day": 39.66853663160947,
+        "episodes_per_day": 16.959503920234656,
+        "mean_signals_per_episode": 2.3390151515151514,
+        "median_signals_per_episode": 1.0,
+        "p95_signals_per_episode": 6.0
+      },
+      "correlate_seconds": 0.017454749999160413
     }
   },
   "default_gap": 60,
@@ -498,2097 +498,6 @@
     }
   },
   "evidence_graphs": [
-    {
-      "episode_id": "episode:cceca8f99e4a9b1a89e5",
-      "episode_type": "behavioral",
-      "assets": [
-        "asset:unsw:192.168.1.1",
-        "asset:unsw:192.168.1.240",
-        "asset:unsw:208.67.220.220",
-        "asset:unsw:8.8.8.8"
-      ],
-      "relationships": [
-        "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
-      ],
-      "edges": [
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:192.168.1.1",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:208.67.220.220",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:8.8.8.8",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
-        }
-      ],
-      "signals": [
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH:2016-10-21T09:40:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.1",
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
-          "score": 0.34270891109260954,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "PROTOCOL_NOVELTY",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:33:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3201727666264798,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:34:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.31964795057412837,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:36:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3193003528481923,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:37:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3193003528481923,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:41:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.32166774576499335,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:42:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3200831960530656,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:34:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.3232547539969599,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:36:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.3218344969186495,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:37:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.3218344969186495,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:42:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.32275114729168836,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.1:2016-10-21T09:39:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.1"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.1:2016-10-21T09:40:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.1"
-          ],
-          "relationship": null,
-          "score": 0.8926436682543953,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.1:2016-10-21T09:41:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.1"
-          ],
-          "relationship": null,
-          "score": 0.8926436682543953,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.1:2016-10-21T09:42:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.1"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.1:2016-10-21T09:42:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.1"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:33:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:34:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.7357536925280754,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:34:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:35:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.7543095958231408,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:35:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:36:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8471866108522065,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:36:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:37:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:38:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:38:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:39:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:40:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:41:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:42:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:42:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:33:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.7543095958231408,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:34:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9567117922663525,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:34:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8788948756210829,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:35:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:35:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:36:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:36:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:37:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:37:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:38:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8926436682543953,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:38:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.7831184868402492,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:39:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:40:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:41:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:42:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:42:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.7831184868402492,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:33:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.8926436682543953,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:34:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:34:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.917001238546401,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:35:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:35:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:36:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:36:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:37:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:37:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:38:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9279029012492441,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:38:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.7831184868402492,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:39:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.917001238546401,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:40:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:41:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        }
-      ],
-      "evidence_families": [
-        "TOPOLOGY_SPREAD",
-        "PROTOCOL_CHANGE",
-        "PORT_CHANGE",
-        "TRAFFIC_VOLUME",
-        "DIRECTIONAL_CHANGE"
-      ],
-      "evidence_strength": "STRONG"
-    },
-    {
-      "episode_id": "episode:2f13ac7b2020ba4bc6e6",
-      "episode_type": "behavioral",
-      "assets": [
-        "asset:unsw:192.168.1.240",
-        "asset:unsw:208.67.220.220",
-        "asset:unsw:8.8.8.8"
-      ],
-      "relationships": [
-        "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
-      ],
-      "edges": [
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:208.67.220.220",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:8.8.8.8",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
-        }
-      ],
-      "signals": [
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:23:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3193899334426527,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:24:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.31982795916859114,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:26:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3201727666264798,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:27:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.32165771681437244,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:31:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3201727666264798,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:32:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3197660758696258,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:24:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.31531481258485305,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:28:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.31531481258485305,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:32:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.32224188441199514,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:27:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 1.0,
-          "reasons": [
-            "INBOUND_VOLUME_DEVIATION",
-            "PEER_SET_CHANGE",
-            "RELATIONSHIP_CREATION_BURST"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:28:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.965255031544051,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:29:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:29:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:30:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:31:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:32:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8285755442424381,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:32:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:33:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.7831184868402492,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:26:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8471866108522065,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:26:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.7531433481887286,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:27:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8788948756210829,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:28:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:29:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9567117922663525,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:30:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.7543095958231408,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:31:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9279029012492441,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:31:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:32:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:32:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:33:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:27:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 1.0,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:28:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9567117922663525,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:29:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.7543095958231408,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:30:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.917001238546401,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:30:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:31:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.917001238546401,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:31:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:32:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:32:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9279029012492441,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:33:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        }
-      ],
-      "evidence_families": [
-        "PEER_NOVELTY",
-        "TOPOLOGY_SPREAD",
-        "PROTOCOL_CHANGE",
-        "PORT_CHANGE",
-        "TRAFFIC_VOLUME",
-        "DIRECTIONAL_CHANGE",
-        "PEER_SET_CHANGE"
-      ],
-      "evidence_strength": "STRONG"
-    },
-    {
-      "episode_id": "episode:6f09bfa28d13ea0e541e",
-      "episode_type": "behavioral",
-      "assets": [
-        "asset:unsw:192.168.1.240",
-        "asset:unsw:208.67.220.220",
-        "asset:unsw:8.8.8.8"
-      ],
-      "relationships": [
-        "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
-      ],
-      "edges": [
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:208.67.220.220",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:8.8.8.8",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
-        }
-      ],
-      "signals": [
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:44:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.31973838466335125,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:46:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.32682727474564655,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:47:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3200831960530656,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:48:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3207531350330062,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:49:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.3200831960530656,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:46:00+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.3218344969186495,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:49:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.32275114729168836,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:44:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.863834777237287,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:45:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8788948756210829,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:45:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:46:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:46:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.9381007256565842,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:47:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.8788948756210829,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:47:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": null,
-          "score": 0.965255031544051,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:44:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:44:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:45:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:46:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.9567117922663525,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:46:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.719050362828292,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:47:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.863834777237287,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:208.67.220.220:2016-10-21T09:47:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:208.67.220.220"
-          ],
-          "relationship": null,
-          "score": 0.8074760571322549,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:44:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9810693625583582,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:44:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9476801092115243,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:45:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9052913314415145,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:46:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.8471866108522065,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:46:30+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.7543095958231408,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE",
-            "PROTOCOL_DIVERSITY_CHANGE"
-          ]
-        },
-        {
-          "signal_id": "sig:node:asset:unsw:8.8.8.8:2016-10-21T09:47:00+00:00",
-          "type": "node",
-          "assets": [
-            "asset:unsw:8.8.8.8"
-          ],
-          "relationship": null,
-          "score": 0.9279029012492441,
-          "reasons": [
-            "COMMUNICATION_RATIO_SHIFT",
-            "FAN_OUT_DEVIATION",
-            "INBOUND_VOLUME_DEVIATION",
-            "OUTBOUND_VOLUME_DEVIATION",
-            "PORT_DIVERSITY_CHANGE"
-          ]
-        }
-      ],
-      "evidence_families": [
-        "TOPOLOGY_SPREAD",
-        "PROTOCOL_CHANGE",
-        "PORT_CHANGE",
-        "TRAFFIC_VOLUME",
-        "DIRECTIONAL_CHANGE"
-      ],
-      "evidence_strength": "STRONG"
-    },
     {
       "episode_id": "episode:c95d75c2783c529a9df4",
       "episode_type": "behavioral",
@@ -3150,6 +1059,261 @@
             "PORT_NOVELTY",
             "PROTOCOL_NOVELTY"
           ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:108.61.56.35:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:108.61.56.35"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:129.250.35.251:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:129.250.35.251"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:129.6.15.29:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:129.6.15.29"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:162.213.2.253:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:162.213.2.253"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-27T22:10:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "NEW_PEER_BURST",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "NEW_PEER_BURST",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.96.202.120:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.96.202.120"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:204.9.54.119:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:204.9.54.119"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:23.105.70.69:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:23.105.70.69"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:23.23.189.20:2016-10-27T22:10:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:23.23.189.20"
+          ],
+          "relationship": null,
+          "score": 0.7241423111916744,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:23.23.78.14:2016-10-27T22:10:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:23.23.78.14"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:68.32.10.103:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:68.32.10.103"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:69.164.202.202:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:69.164.202.202"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:72.21.207.82:2016-10-27T22:10:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:72.21.207.82"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:96.126.100.203:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:96.126.100.203"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:96.126.105.86:2016-10-27T22:10:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:96.126.105.86"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
         }
       ],
       "evidence_families": [
@@ -3157,53 +1321,33 @@
         "TOPOLOGY_SPREAD",
         "PROTOCOL_CHANGE",
         "PORT_CHANGE",
-        "TRAFFIC_VOLUME"
+        "TRAFFIC_VOLUME",
+        "DIRECTIONAL_CHANGE",
+        "PEER_SET_CHANGE"
       ],
-      "evidence_strength": "MODERATE"
+      "evidence_strength": "STRONG"
     },
     {
-      "episode_id": "episode:e2bbce81e1abe6a9ac40",
+      "episode_id": "episode:75dd1ce8221eeb2a9bc9",
       "episode_type": "behavioral",
       "assets": [
-        "asset:unsw:176.32.98.204",
+        "asset:unsw:149.171.37.162",
         "asset:unsw:192.168.1.1",
         "asset:unsw:192.168.1.240",
-        "asset:unsw:205.251.242.52",
         "asset:unsw:208.67.220.220",
-        "asset:unsw:23.23.189.16",
-        "asset:unsw:23.23.189.20",
-        "asset:unsw:23.23.189.56",
-        "asset:unsw:23.23.78.23",
-        "asset:unsw:54.239.29.231",
-        "asset:unsw:72.21.215.34",
-        "asset:unsw:72.21.215.58",
         "asset:unsw:8.8.8.8"
       ],
       "relationships": [
-        "rel:asset:unsw:192.168.1.1|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:176.32.98.204|COMMUNICATES_WITH",
+        "rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
         "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:205.251.242.52|COMMUNICATES_WITH",
         "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.16|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.20|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.56|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.78.23|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:54.239.29.231|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.34|COMMUNICATES_WITH",
-        "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.58|COMMUNICATES_WITH",
         "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
       ],
       "edges": [
         {
-          "from": "asset:unsw:192.168.1.1",
+          "from": "asset:unsw:149.171.37.162",
           "to": "asset:unsw:192.168.1.240",
-          "relationship_id": "rel:asset:unsw:192.168.1.1|asset:unsw:192.168.1.240|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:176.32.98.204",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:176.32.98.204|COMMUNICATES_WITH"
+          "relationship_id": "rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH"
         },
         {
           "from": "asset:unsw:192.168.1.240",
@@ -3212,48 +1356,8 @@
         },
         {
           "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:205.251.242.52",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:205.251.242.52|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
           "to": "asset:unsw:208.67.220.220",
           "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:23.23.189.16",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.16|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:23.23.189.20",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.20|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:23.23.189.56",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.56|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:23.23.78.23",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.78.23|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:54.239.29.231",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:54.239.29.231|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:72.21.215.34",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.34|COMMUNICATES_WITH"
-        },
-        {
-          "from": "asset:unsw:192.168.1.240",
-          "to": "asset:unsw:72.21.215.58",
-          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.58|COMMUNICATES_WITH"
         },
         {
           "from": "asset:unsw:192.168.1.240",
@@ -3263,45 +1367,31 @@
       ],
       "signals": [
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.1|asset:unsw:192.168.1.240|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
+          "signal_id": "sig:edge:rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH:2016-10-21T09:15:30+00:00",
           "type": "edge",
           "assets": [
-            "asset:unsw:192.168.1.1",
+            "asset:unsw:149.171.37.162",
             "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.1|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
-          "score": 0.7258799214406375,
+          "relationship": "rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
+          "score": 0.7106251872946725,
           "reasons": [
             "APP_PROTOCOL_NOVELTY",
             "FAN_OUT_DEVIATION",
             "NEW_PEER",
-            "PORT_NOVELTY",
-            "PROTOCOL_NOVELTY"
-          ]
-        },
-        {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:176.32.98.204|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
-          "assets": [
-            "asset:unsw:176.32.98.204",
-            "asset:unsw:192.168.1.240"
-          ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:176.32.98.204|COMMUNICATES_WITH",
-          "score": 0.3368080243356774,
-          "reasons": [
-            "FAN_OUT_DEVIATION",
+            "PROTOCOL_NOVELTY",
             "TRAFFIC_VOLUME_DEVIATION"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH:2016-10-21T09:16:00+00:00",
           "type": "edge",
           "assets": [
             "asset:unsw:192.168.1.1",
             "asset:unsw:192.168.1.240"
           ],
           "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
-          "score": 0.3905638231759673,
+          "score": 0.3524929436435226,
           "reasons": [
             "FAN_OUT_DEVIATION",
             "PROTOCOL_NOVELTY",
@@ -3309,211 +1399,475 @@
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:16:00+00:00",
           "type": "edge",
           "assets": [
-            "asset:unsw:192.168.1.1",
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.35982003287327974,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "PROTOCOL_NOVELTY",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:16:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3312240838455569,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:17:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3193966523864762,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:17:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.32465521494120614,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:18:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3191336194073535,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:21:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.33307651322236254,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:23:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3193899334426527,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:24:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.31982795916859114,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:16:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.36098921508803095,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "PROTOCOL_NOVELTY",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:16:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3364037861121502,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:17:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3272276566770824,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:24:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.31531481258485305,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:149.171.37.162:2016-10-21T09:15:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:149.171.37.162"
+          ],
+          "relationship": null,
+          "score": 1.0,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "NEW_PEER_BURST",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PROTOCOL_DIVERSITY_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:15:30+00:00",
+          "type": "node",
+          "assets": [
             "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
-          "score": 0.3272956962005221,
+          "relationship": null,
+          "score": 1.0,
           "reasons": [
-            "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "INBOUND_VOLUME_DEVIATION",
+            "PEER_SET_CHANGE",
+            "RELATIONSHIP_CREATION_BURST"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:205.251.242.52|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:16:00+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:205.251.242.52"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:205.251.242.52|COMMUNICATES_WITH",
-          "score": 0.3587843605214106,
+          "relationship": null,
+          "score": 0.8788948756210829,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:16:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.39730726051582,
+          "relationship": null,
+          "score": 1.0,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "PROTOCOL_NOVELTY",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:17:00+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:208.67.220.220"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
-          "score": 0.356092197757841,
+          "relationship": null,
+          "score": 0.9279029012492441,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.16|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:17:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:23.23.189.16"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.16|COMMUNICATES_WITH",
-          "score": 0.7530634610817191,
+          "relationship": null,
+          "score": 0.965255031544051,
           "reasons": [
-            "APP_PROTOCOL_NOVELTY",
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "NEW_PEER",
-            "PORT_NOVELTY",
-            "PROTOCOL_NOVELTY"
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.20|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:18:00+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:23.23.189.20"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.20|COMMUNICATES_WITH",
-          "score": 0.45205686851919513,
+          "relationship": null,
+          "score": 0.9052913314415145,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "PORT_DIVERSITY",
-            "PORT_NOVELTY",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.20|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:18:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:23.23.189.20"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.20|COMMUNICATES_WITH",
-          "score": 0.4234950721194729,
+          "relationship": null,
+          "score": 0.9567117922663525,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.56|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:19:00+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:23.23.189.56"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.189.56|COMMUNICATES_WITH",
-          "score": 0.7568401767658504,
+          "relationship": null,
+          "score": 0.719050362828292,
           "reasons": [
-            "APP_PROTOCOL_NOVELTY",
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "NEW_PEER",
-            "PORT_NOVELTY",
-            "PROTOCOL_NOVELTY"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:23.23.78.23|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:19:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:23.23.78.23"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.78.23|COMMUNICATES_WITH",
-          "score": 0.7530634610817191,
+          "relationship": null,
+          "score": 0.9052913314415145,
           "reasons": [
-            "APP_PROTOCOL_NOVELTY",
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "NEW_PEER",
-            "PORT_NOVELTY",
-            "PROTOCOL_NOVELTY"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:54.239.29.231|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:20:00+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:54.239.29.231"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:54.239.29.231|COMMUNICATES_WITH",
-          "score": 0.3332995986067504,
+          "relationship": null,
+          "score": 0.9052913314415145,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.34|COMMUNICATES_WITH:2016-10-05T09:11:00+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:20:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:72.21.215.34"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.34|COMMUNICATES_WITH",
-          "score": 0.33053667959989885,
+          "relationship": null,
+          "score": 0.8074760571322549,
           "reasons": [
-            "TRAFFIC_VOLUME_DEVIATION"
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.58|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:21:00+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:72.21.215.58"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.215.58|COMMUNICATES_WITH",
-          "score": 0.3423789856587908,
+          "relationship": null,
+          "score": 0.9567117922663525,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-05T09:10:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:21:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.404643225550871,
+          "relationship": null,
+          "score": 0.7543095958231408,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "PROTOCOL_NOVELTY",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         },
         {
-          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-05T09:11:30+00:00",
-          "type": "edge",
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:22:30+00:00",
+          "type": "node",
           "assets": [
-            "asset:unsw:192.168.1.240",
-            "asset:unsw:8.8.8.8"
+            "asset:unsw:192.168.1.240"
           ],
-          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
-          "score": 0.38221248225522353,
+          "relationship": null,
+          "score": 0.8285755442424381,
           "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
             "FAN_OUT_DEVIATION",
-            "TRAFFIC_VOLUME_DEVIATION"
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:23:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:24:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.917001238546401,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:24:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9279029012492441,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:25:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.7543095958231408,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
           ]
         }
       ],
@@ -3522,14 +1876,1475 @@
         "TOPOLOGY_SPREAD",
         "PROTOCOL_CHANGE",
         "PORT_CHANGE",
-        "TRAFFIC_VOLUME"
+        "TRAFFIC_VOLUME",
+        "DIRECTIONAL_CHANGE",
+        "PEER_SET_CHANGE"
       ],
-      "evidence_strength": "MODERATE"
+      "evidence_strength": "STRONG"
+    },
+    {
+      "episode_id": "episode:f0b020b9d8e3ed206cdd",
+      "episode_type": "behavioral",
+      "assets": [
+        "asset:unsw:149.171.37.162",
+        "asset:unsw:192.168.1.1",
+        "asset:unsw:192.168.1.240",
+        "asset:unsw:208.67.220.220",
+        "asset:unsw:8.8.8.8"
+      ],
+      "relationships": [
+        "rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
+        "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
+        "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+        "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
+      ],
+      "edges": [
+        {
+          "from": "asset:unsw:149.171.37.162",
+          "to": "asset:unsw:192.168.1.240",
+          "relationship_id": "rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH"
+        },
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:192.168.1.1",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH"
+        },
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:208.67.220.220",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
+        },
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:8.8.8.8",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
+        }
+      ],
+      "signals": [
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH:2016-10-21T10:23:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:149.171.37.162",
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": "rel:asset:unsw:149.171.37.162|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
+          "score": 0.35319352049576075,
+          "reasons": [
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH:2016-10-21T10:24:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.1",
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:192.168.1.1|COMMUNICATES_WITH",
+          "score": 0.35354707388660805,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "PROTOCOL_NOVELTY",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:24:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3488299734036341,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "PROTOCOL_NOVELTY",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:24:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.32949620235764315,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:25:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3277287141405191,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:26:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.31904403956898647,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:27:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3200831960530656,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:28:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3193003528481923,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T10:33:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3200831960530656,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T10:24:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3591674843664403,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "PROTOCOL_NOVELTY",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T10:25:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3305823405083913,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T10:28:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3218344969186495,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T10:31:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.31531481258485305,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T10:33:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.32275114729168836,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:24:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9476801092115243,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:24:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9810693625583582,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:25:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.965255031544051,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:25:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.863834777237287,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:26:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:26:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9476801092115243,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:27:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:27:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8788948756210829,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:28:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9476801092115243,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:28:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:29:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:30:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:31:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:31:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.917001238546401,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:32:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:33:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9567117922663525,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T10:33:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8471866108522065,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        }
+      ],
+      "evidence_families": [
+        "TOPOLOGY_SPREAD",
+        "PROTOCOL_CHANGE",
+        "PORT_CHANGE",
+        "TRAFFIC_VOLUME",
+        "DIRECTIONAL_CHANGE"
+      ],
+      "evidence_strength": "STRONG"
+    },
+    {
+      "episode_id": "episode:5933ec4e53b2f0fc27f3",
+      "episode_type": "behavioral",
+      "assets": [
+        "asset:unsw:192.168.1.240",
+        "asset:unsw:208.67.220.220",
+        "asset:unsw:8.8.8.8"
+      ],
+      "relationships": [
+        "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+        "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
+      ],
+      "edges": [
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:208.67.220.220",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
+        },
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:8.8.8.8",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
+        }
+      ],
+      "signals": [
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:26:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3201727666264798,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:27:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.32165771681437244,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:31:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3201727666264798,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:32:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3197660758696258,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:33:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3201727666264798,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:34:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.31964795057412837,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:36:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3193003528481923,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:28:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.31531481258485305,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:32:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.32224188441199514,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:34:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3232547539969599,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:36:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3218344969186495,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:26:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:26:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.7831184868402492,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:27:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9279029012492441,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:28:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.917001238546401,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:29:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:30:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:30:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:31:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:31:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8285755442424381,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:32:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9052913314415145,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:32:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:33:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.7543095958231408,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:33:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:34:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8074760571322549,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:34:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9279029012492441,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:35:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8788948756210829,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:35:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.7831184868402492,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:36:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9476801092115243,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        }
+      ],
+      "evidence_families": [
+        "TOPOLOGY_SPREAD",
+        "PROTOCOL_CHANGE",
+        "PORT_CHANGE",
+        "TRAFFIC_VOLUME",
+        "DIRECTIONAL_CHANGE"
+      ],
+      "evidence_strength": "STRONG"
+    },
+    {
+      "episode_id": "episode:42ac9c2c270c1e50fd46",
+      "episode_type": "behavioral",
+      "assets": [
+        "asset:unsw:192.168.1.240",
+        "asset:unsw:208.67.220.220",
+        "asset:unsw:8.8.8.8"
+      ],
+      "relationships": [
+        "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+        "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
+      ],
+      "edges": [
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:208.67.220.220",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH"
+        },
+        {
+          "from": "asset:unsw:192.168.1.240",
+          "to": "asset:unsw:8.8.8.8",
+          "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH"
+        }
+      ],
+      "signals": [
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:47:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3200831960530656,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:48:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3207531350330062,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:49:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3200831960530656,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:51:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3196417982898111,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:53:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3193003528481923,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:55:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3200831960530656,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH:2016-10-21T09:57:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:208.67.220.220"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:208.67.220.220|COMMUNICATES_WITH",
+          "score": 0.3196417982898111,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:49:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.32275114729168836,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:53:30+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.3218344969186495,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:edge:rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH:2016-10-21T09:55:00+00:00",
+          "type": "edge",
+          "assets": [
+            "asset:unsw:192.168.1.240",
+            "asset:unsw:8.8.8.8"
+          ],
+          "relationship": "rel:asset:unsw:192.168.1.240|asset:unsw:8.8.8.8|COMMUNICATES_WITH",
+          "score": 0.32275114729168836,
+          "reasons": [
+            "FAN_OUT_DEVIATION",
+            "TRAFFIC_VOLUME_DEVIATION"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:47:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9476801092115243,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:47:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8285755442424381,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:48:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9476801092115243,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:48:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8285755442424381,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:49:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:49:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:50:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8471866108522065,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:51:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8074760571322549,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:51:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:52:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:52:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:53:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8074760571322549,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:53:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:54:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.719050362828292,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:55:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:55:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8285755442424381,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:56:30+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.8285755442424381,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE",
+            "PROTOCOL_DIVERSITY_CHANGE"
+          ]
+        },
+        {
+          "signal_id": "sig:node:asset:unsw:192.168.1.240:2016-10-21T09:57:00+00:00",
+          "type": "node",
+          "assets": [
+            "asset:unsw:192.168.1.240"
+          ],
+          "relationship": null,
+          "score": 0.9381007256565842,
+          "reasons": [
+            "COMMUNICATION_RATIO_SHIFT",
+            "FAN_OUT_DEVIATION",
+            "INBOUND_VOLUME_DEVIATION",
+            "OUTBOUND_VOLUME_DEVIATION",
+            "PORT_DIVERSITY_CHANGE"
+          ]
+        }
+      ],
+      "evidence_families": [
+        "TOPOLOGY_SPREAD",
+        "PROTOCOL_CHANGE",
+        "PORT_CHANGE",
+        "TRAFFIC_VOLUME",
+        "DIRECTIONAL_CHANGE"
+      ],
+      "evidence_strength": "STRONG"
     }
   ],
   "performance": {
     "signals": 1235,
-    "signals_per_sec": 70335.97187115195,
-    "episode_update_latency_ms": 0.014217476113529703
+    "signals_per_sec": 95535.86064049756,
+    "episode_update_latency_ms": 0.010467273684412708
   }
 }

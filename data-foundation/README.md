@@ -21,6 +21,7 @@ Shadow Integration v1:                             COMPLETE / SHADOW-READY
 Node Behavior Intelligence v1:                     COMPLETE
 Node Shadow Integration v1:                        COMPLETE / SHADOW-READY
 Behavioral Episode Intelligence v1:                COMPLETE
+Behavioral Episode Shadow Integration v1:          COMPLETE / SHADOW-READY
 ```
 
 - **Edge Behavior Intelligence v1** (`ai/edge_behavior/`) — leakage-safe edge-anomaly
@@ -55,13 +56,17 @@ Behavioral Episode Intelligence v1:                COMPLETE
   raises over-merge risk) and `max_episode_duration_seconds=600`. **`BehavioralEpisodeV1` is
   NOT a `SecurityIncident`**: correlation does **not** imply causality, episodes contain **no
   attack probability**, assign **no attack stage**, and identify **no attacker/victim**. Episode
-  compression on UNSW is **modest (1.44×) and must not be read as production alert-reduction
+  compression on UNSW is **modest (1.95×) and must not be read as production alert-reduction
   proof**; it measures analyst-facing fragmentation only. The default gap **must be revalidated
-  on real attack/lab traffic**.
+  on real attack/lab traffic**. (The earlier 857-episode / 1.44× figure was superseded by an
+  upstream Node score→window attribution fix; **633 episodes is canonical** — see
+  `docs/AI_BEHAVIORAL_EPISODE_V1_ERRATA.md`.)
 - Thresholds are **provisional**; **no automatic retraining**. Model binaries are
   regeneration-only.
 - Docs: `docs/AI_EDGE_BEHAVIOR_V1.md`, `docs/AI_SHADOW_INTEGRATION_V1.md`,
-  `docs/AI_NODE_BEHAVIOR_V1.md`, `docs/AI_NODE_SHADOW_INTEGRATION_V1.md`.
+  `docs/AI_NODE_BEHAVIOR_V1.md`, `docs/AI_NODE_SHADOW_INTEGRATION_V1.md`,
+  `docs/AI_BEHAVIORAL_EPISODE_V1.md`, `docs/AI_BEHAVIORAL_EPISODE_SHADOW_V1.md`,
+  `docs/AI_BEHAVIORAL_EPISODE_V1_ERRATA.md`.
 
 ## What is here
 
