@@ -53,6 +53,12 @@ venv/
 *.pkl
 *.onnx
 
+# === Shadow runtime outputs (regenerable; benchmark DBs) ===
+ai/shadow/runtime_output/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
 # === OS ===
 .DS_Store
 Thumbs.db

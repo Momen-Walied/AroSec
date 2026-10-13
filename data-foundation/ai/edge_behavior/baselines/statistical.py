@@ -72,3 +72,25 @@ class StatisticalEdgeModel(BaseEdgeModel):
     def feature_contributions(self, X: np.ndarray, row: int) -> dict[str, float]:
         z = self.explain(X[row:row + 1])["feature_z"][0]
         return {name: float(z[self._index[name]]) for name in FEATURE_COLUMNS if name in self._index}
+
+    def explain_batch(self, X: np.ndarray, top_k: int = 5) -> tuple[list[list[dict]], list[dict]]:
+        """Reasons + feature contributions for many rows in ONE explain pass."""
+        explained = self.explain(X)
+        comp = explained["component_scores"]
+        weights = explained["component_weights"]
+        names = explained["component_names"]
+        Z = explained["feature_z"]
+        contrib = comp * weights
+        reasons_list: list[list[dict]] = []
+        feats_list: list[dict] = []
+        for i in range(X.shape[0]):
+            row = contrib[i]
+            order = np.argsort(-row)
+            reasons_list.append([
+                {"code": names[j], "contribution": float(row[j])}
+                for j in order[:top_k] if row[j] > 1e-6
+            ])
+            feats_list.append({
+                name: float(Z[i, self._index[name]]) for name in FEATURE_COLUMNS if name in self._index
+            })
+        return reasons_list, feats_list

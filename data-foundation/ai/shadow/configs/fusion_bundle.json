@@ -1,0 +1,58 @@
+{
+  "bundle_version": "shadow-fusion-v1",
+  "feature_schema_version": "edge_features_v1",
+  "reason_component": "statistical",
+  "components": [
+    {
+      "name": "statistical",
+      "artifact": "ai/edge_behavior/artifacts/edge_behavior/edge-stat-v1",
+      "model_version": "edge-stat-v1",
+      "weight": 0.603
+    },
+    {
+      "name": "isolation_forest",
+      "artifact": "ai/edge_behavior/artifacts/edge_behavior/edge-iforest-v1",
+      "model_version": "edge-iforest-v1",
+      "weight": 0.397
+    }
+  ],
+  "calibration": {
+    "threshold": 0.31511792165682534,
+    "target_alert_rate": 0.01,
+    "severity_thresholds": {
+      "INFO": 0.0,
+      "LOW": 0.31511792165682534,
+      "MEDIUM": 0.3201727666264798,
+      "HIGH": 0.3479626776344062,
+      "CRITICAL": 0.37390601164579523
+    }
+  },
+  "feature_columns": [
+    "log_connections",
+    "log_packets",
+    "log_out_bytes",
+    "log_in_bytes",
+    "out_in_ratio",
+    "log_unique_dst_ports",
+    "log_unique_src_ports",
+    "port_novelty_count",
+    "port_entropy",
+    "port_wellknown_fraction",
+    "port_privileged_fraction",
+    "n_protocols",
+    "protocol_entropy",
+    "dominant_protocol_share",
+    "protocol_novelty_count",
+    "protocol_novelty_ratio",
+    "n_app_protocols",
+    "app_protocol_entropy",
+    "app_protocol_novelty_count",
+    "new_peer",
+    "log_src_unique_peers",
+    "log_src_new_peers",
+    "fan_out_ratio",
+    "log_relationship_age",
+    "log_historical_conn"
+  ],
+  "note": "Provisional shadow threshold. Recalibrate during shadow deployment."
+}

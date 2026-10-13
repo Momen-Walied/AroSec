@@ -12,6 +12,26 @@ Its job is to give the Network Team, AI Team, and future Graph Intelligence comp
 > `CAM-01 → ENG-PC-03` (first seen 20s ago, SMB, never observed before) as
 > **clearly different edges**, without us hard-coding that distinction into the AI layer.
 
+## Project status
+
+```
+Data Foundation v0.2 (Cyber Graph Data Contract):  FROZEN
+Edge Behavior Intelligence v1:                     COMPLETE
+Shadow Integration v1:                             COMPLETE / SHADOW-READY
+```
+
+- **Edge Behavior Intelligence v1** (`ai/edge_behavior/`) — leakage-safe edge-anomaly
+  baselines; selected approach is a **validation-weighted Statistical + Isolation Forest
+  fusion** (Autoencoder evaluated and rejected). **Relationship anomaly detection, not
+  validated attack detection**; UNSW identities are provisional `dataset_ip_fallback`.
+- **Shadow Integration v1** (`ai/shadow/`) — event-time, transport-agnostic shadow runtime
+  with **exact online/offline feature parity** (0 mismatches / 67,885 windows), idempotent
+  processing, durable SQLite state + restart recovery, drift monitoring, and an analyst
+  feedback contract. **Shadow-only, read-only, fail-open — no remediation.**
+- Threshold **0.315 is provisional**; **no automatic retraining**. Model binaries are
+  regeneration-only.
+- Docs: `docs/AI_EDGE_BEHAVIOR_V1.md`, `docs/AI_SHADOW_INTEGRATION_V1.md`.
+
 ## What is here
 
 | Area | Location |
