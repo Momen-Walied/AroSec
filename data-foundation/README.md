@@ -20,6 +20,7 @@ Edge Behavior Intelligence v1:                     COMPLETE
 Shadow Integration v1:                             COMPLETE / SHADOW-READY
 Node Behavior Intelligence v1:                     COMPLETE
 Node Shadow Integration v1:                        COMPLETE / SHADOW-READY
+Behavioral Episode Intelligence v1:                COMPLETE
 ```
 
 - **Edge Behavior Intelligence v1** (`ai/edge_behavior/`) — leakage-safe edge-anomaly
@@ -48,6 +49,15 @@ Node Shadow Integration v1:                        COMPLETE / SHADOW-READY
   remain **provisional**; UNSW identities remain **`dataset_ip_fallback`**. The combined durable
   runtime sustains **≈2,045 observations/sec** in the current benchmark; Edge and Node signals
   are **strongly complementary**; there is **no automatic remediation or retraining**.
+- **Behavioral Episode Intelligence v1** (`ai/episodes/`) — deterministic temporal evidence
+  correlation of Edge/Node signals into **`BehavioralEpisodeV1`** groups. Default
+  `correlation_gap_seconds=60` (**recommended provisional gap**; 30 s over-fragments, 300 s
+  raises over-merge risk) and `max_episode_duration_seconds=600`. **`BehavioralEpisodeV1` is
+  NOT a `SecurityIncident`**: correlation does **not** imply causality, episodes contain **no
+  attack probability**, assign **no attack stage**, and identify **no attacker/victim**. Episode
+  compression on UNSW is **modest (1.44×) and must not be read as production alert-reduction
+  proof**; it measures analyst-facing fragmentation only. The default gap **must be revalidated
+  on real attack/lab traffic**.
 - Thresholds are **provisional**; **no automatic retraining**. Model binaries are
   regeneration-only.
 - Docs: `docs/AI_EDGE_BEHAVIOR_V1.md`, `docs/AI_SHADOW_INTEGRATION_V1.md`,
