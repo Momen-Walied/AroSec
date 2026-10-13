@@ -1,0 +1,210 @@
+{
+  "dataset_id": "unsw_iotraffic",
+  "window": "30s",
+  "thresholds": {
+    "edge": 0.315,
+    "node": 0.719
+  },
+  "counts": {
+    "observations": 98747,
+    "edge_windows": 67885,
+    "node_windows": 103680,
+    "edge_signals": 566,
+    "node_signals": 669,
+    "total_signals": 1235,
+    "episodes": 633
+  },
+  "span_days": 31.132986111111112,
+  "parity": {
+    "offline_episodes": 633,
+    "online_episodes": 633,
+    "id_mismatches_online_only": 0,
+    "id_mismatches_offline_only": 0,
+    "membership_mismatches": 0,
+    "timestamp_mismatches": 0,
+    "evidence_mismatches": 0,
+    "severity_mismatches": 0,
+    "primary_asset_mismatches": 0,
+    "duration_mismatches": 0,
+    "identity_mismatches": 0,
+    "examples": [],
+    "total_mismatches": 0
+  },
+  "restart_parity": {
+    "offline_episodes": 633,
+    "online_episodes": 633,
+    "id_mismatches_online_only": 0,
+    "id_mismatches_offline_only": 0,
+    "membership_mismatches": 0,
+    "timestamp_mismatches": 0,
+    "evidence_mismatches": 0,
+    "severity_mismatches": 0,
+    "primary_asset_mismatches": 0,
+    "duration_mismatches": 0,
+    "identity_mismatches": 0,
+    "examples": [],
+    "total_mismatches": 0
+  },
+  "metrics": {
+    "episodes": 633,
+    "episodes_per_site_per_day": 20.332132540735866,
+    "duration_seconds": {
+      "p50": 30.0,
+      "p90": 60.0,
+      "p95": 90.0,
+      "p99": 370.799999999997
+    },
+    "signals_per_episode": {
+      "p50": 1.0,
+      "p90": 3.0,
+      "p95": 5.0,
+      "p99": 24.3599999999999
+    },
+    "mean_signals_per_episode": 1.9510268562401263,
+    "assets_per_episode": {
+      "p50": 2.0,
+      "p90": 2.0,
+      "p95": 3.0,
+      "p99": 6.0
+    },
+    "relationships_per_episode": {
+      "p50": 1.0,
+      "p90": 1.0,
+      "p95": 2.0,
+      "p99": 5.0
+    },
+    "edge_only_pct": 0.34913112164297,
+    "node_only_pct": 0.45813586097946285,
+    "mixed_pct": 0.19273301737756715,
+    "evidence_strength_distribution": {
+      "STRONG": 122,
+      "WEAK": 478,
+      "MODERATE": 33
+    },
+    "severity_distribution": {
+      "CRITICAL": 55,
+      "MEDIUM": 226,
+      "LOW": 299,
+      "HIGH": 51,
+      "INFO": 2
+    },
+    "top_evidence_families": [
+      [
+        "TRAFFIC_VOLUME",
+        630
+      ],
+      [
+        "PROTOCOL_CHANGE",
+        595
+      ],
+      [
+        "TOPOLOGY_SPREAD",
+        566
+      ],
+      [
+        "DIRECTIONAL_CHANGE",
+        406
+      ],
+      [
+        "PORT_CHANGE",
+        317
+      ],
+      [
+        "PEER_NOVELTY",
+        42
+      ],
+      [
+        "PEER_SET_CHANGE",
+        42
+      ]
+    ],
+    "episodes_with_gt1_asset": 343,
+    "episodes_with_gt1_relationship": 48
+  },
+  "compression": {
+    "raw_signals": 1235,
+    "episodes": 633,
+    "signal_compression_ratio": 1.9510268562401263,
+    "signals_per_day": 39.66853663160947,
+    "episodes_per_day": 20.332132540735866,
+    "mean_signals_per_episode": 1.9510268562401263,
+    "median_signals_per_episode": 1.0,
+    "p95_signals_per_episode": 5.0
+  },
+  "performance": {
+    "observations": 98747,
+    "elapsed_seconds": 184.41453791700042,
+    "obs_per_sec": 535.4621230807905,
+    "peak_rss_mb": 2279.375,
+    "state_db_mb": 8.69921875,
+    "sink_db_mb": 688.68359375,
+    "edge_feature_ms": {
+      "count": 14761,
+      "mean": 0.7403993207825504,
+      "p50": 0.5597331997705624,
+      "p95": 2.0939579990226775,
+      "p99": 2.457524801138788,
+      "max": 112.44461816750118
+    },
+    "node_feature_ms": {
+      "count": 14761,
+      "mean": 0.25273492196446373,
+      "p50": 0.21258333435980603,
+      "p95": 0.6041249980626162,
+      "p99": 0.7676957007788587,
+      "max": 2.199888665927574
+    },
+    "edge_inference_ms": {
+      "count": 14761,
+      "mean": 1.6375089359668695,
+      "p50": 1.1527583992574364,
+      "p95": 5.209957998886239,
+      "p99": 5.65282500028843,
+      "max": 14.041624999663327
+    },
+    "node_inference_ms": {
+      "count": 14761,
+      "mean": 0.030662141466579168,
+      "p50": 0.02591662541817641,
+      "p95": 0.06902099994476885,
+      "p99": 0.07779190054861822,
+      "max": 0.14433350224862806
+    },
+    "episode_update_ms": {
+      "count": 1235,
+      "mean": 0.012221034911512076,
+      "p50": 0.013166005373932421,
+      "p95": 0.02431690372759476,
+      "p99": 0.02773206244455655,
+      "max": 0.09433399827685207
+    },
+    "episode_close_ms": {
+      "count": 629,
+      "mean": 0.04197112556668339,
+      "p50": 0.04033299774164334,
+      "p95": 0.05660839960910382,
+      "p99": 0.07796652265824379,
+      "max": 0.11183400056324899
+    },
+    "episode_finalization_lag_s": {
+      "count": 629,
+      "mean": 191.44674085850556,
+      "p50": 180.0,
+      "p95": 300.0,
+      "p99": 300.0,
+      "max": 420.0
+    },
+    "episodes_open_max": 1,
+    "episodes_open_final": 0,
+    "signal_dedupe_size": 1235,
+    "episode_counters": {
+      "episode_signals_received_total": 1235,
+      "episode_signals_duplicate_total": 0,
+      "episode_signals_late_total": 0,
+      "episodes_created_total": 633,
+      "episodes_closed_total": 633,
+      "episodes_merged_total": 0
+    }
+  },
+  "in_memory_seconds": 148.56996012500167
+}

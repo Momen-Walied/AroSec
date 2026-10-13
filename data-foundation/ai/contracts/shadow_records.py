@@ -12,6 +12,7 @@ from pydantic import Field, field_validator
 
 from ai.contracts.edge_anomaly_result import EdgeAnomalyResultV1
 from ai.contracts.node_anomaly_result import NodeAnomalyResultV1
+from ai.episodes.contracts.behavioral_episode import BehavioralEpisodeV1
 from ai.node_behavior.features.schema import NodeFeatureWindowV2
 from src.schemas.base import ContractModel, ensure_utc
 from src.schemas.v2 import EdgeFeatureWindowV2
@@ -99,3 +100,35 @@ class ShadowNodeInferenceRecordV1(ContractModel):
 
 
 ShadowRecord = ShadowInferenceRecordV1 | ShadowNodeInferenceRecordV1
+
+
+class EpisodeShadowRecordV1(ContractModel):
+    """Runtime envelope for a BehavioralEpisodeV1 (keeps runtime metadata out of the contract)."""
+
+    schema_version: str = "episode_shadow_record_v1"
+    runtime_version: str
+    intelligence_type: str = "episode"
+
+    processing_latency_ms: float = Field(0.0, ge=0.0)
+    episode: BehavioralEpisodeV1
+
+    # Runtime (event-time) watermark at which the runtime finalized the episode. This is
+    # operational metadata and is deliberately NOT part of BehavioralEpisodeV1 semantics
+    # (episode.end_time remains the last behavioral signal's event time).
+    closed_at: datetime | None = None
+
+    shadow_mode: bool = True
+
+    @field_validator("intelligence_type")
+    @classmethod
+    def _ep_type(cls, v: str) -> str:
+        if v != "episode":
+            raise ValueError("intelligence_type must be 'episode'")
+        return v
+
+    @field_validator("shadow_mode")
+    @classmethod
+    def _shadow_only(cls, v: bool) -> bool:
+        if v is not True:
+            raise ValueError("shadow_mode must be true; this runtime cannot act on the network")
+        return v

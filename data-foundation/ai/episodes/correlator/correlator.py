@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import hashlib
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from ai.episodes.config import SEVERITY_ORDER, families_for
 from ai.episodes.contracts.behavioral_episode import (
@@ -48,14 +48,48 @@ def _episode_id(start_time: datetime, first_signal_id: str) -> str:
 class BehavioralEpisodeCorrelator:
     def __init__(self, correlation_gap_seconds: int = 60,
                  max_episode_duration_seconds: int = 600,
-                 identity_map: dict | None = None) -> None:
+                 identity_map: dict | None = None,
+                 window_seconds: int = 30, allowed_lateness_seconds: int = 30) -> None:
         self.gap = correlation_gap_seconds
         self.max_duration = max_episode_duration_seconds
         self.identity_map = identity_map or {}
+        self.window_seconds = window_seconds
+        self.allowed_lateness_seconds = allowed_lateness_seconds
         self.active: dict[str, _Active] = {}
+        self._seen: dict[str, None] = {}
+        self._max_ws: datetime | None = None
+        self.counters = {
+            "episode_signals_received_total": 0,
+            "episode_signals_duplicate_total": 0,
+            "episode_signals_late_total": 0,
+            "episodes_created_total": 0,
+            "episodes_closed_total": 0,
+            "episodes_merged_total": 0,
+        }
+
+    @property
+    def _slack_seconds(self) -> int:
+        return self.window_seconds + self.allowed_lateness_seconds
+
+    @property
+    def seen_size(self) -> int:
+        return len(self._seen)
 
     # ------------------------------------------------------------------ #
     def add(self, signal: Signal) -> list[BehavioralEpisodeV1]:
+        self.counters["episode_signals_received_total"] += 1
+        if signal.signal_id in self._seen:
+            self.counters["episode_signals_duplicate_total"] += 1
+            return []
+        if self._max_ws is not None and (
+                signal.window_start + timedelta(seconds=self.gap + self._slack_seconds)) < self._max_ws:
+            # too old to correlate safely: quarantine (never rewrite closed episodes)
+            self.counters["episode_signals_late_total"] += 1
+            return []
+        self._seen[signal.signal_id] = None
+        if self._max_ws is None or signal.window_start > self._max_ws:
+            self._max_ws = signal.window_start
+
         closed: list[BehavioralEpisodeV1] = []
         for eid in list(self.active):
             ep = self.active[eid]
@@ -79,13 +113,74 @@ class BehavioralEpisodeCorrelator:
                     continue
                 canonical.absorb(ep)
                 del self.active[ep.episode_id]
+                self.counters["episodes_merged_total"] += 1
             self._extend(canonical, signal)
         return closed
+
+    def advance_watermark(self, watermark: datetime) -> list[BehavioralEpisodeV1]:
+        """Event-time watermark advance: close episodes that can no longer receive a
+        connecting signal. Safe margins: gap + (window + lateness) for inactivity, and
+        max_duration + (window + lateness) for the duration bound. Membership is identical
+        to close-on-add / flush, so offline/online episode content stays equivalent.
+        """
+        closed: list[BehavioralEpisodeV1] = []
+        for eid in list(self.active):
+            ep = self.active[eid]
+            inactive = (watermark - ep.end_time).total_seconds() > self.gap + self._slack_seconds
+            over_duration = (watermark - ep.start_time).total_seconds() > self.max_duration + self._slack_seconds
+            if inactive or over_duration:
+                closed.append(self._finalize(ep, "inactivity" if inactive else "max_duration"))
+                del self.active[eid]
+        return closed
+
+    def any_expired(self, watermark: datetime) -> bool:
+        for ep in self.active.values():
+            if (watermark - ep.end_time).total_seconds() > self.gap + self._slack_seconds:
+                return True
+            if (watermark - ep.start_time).total_seconds() > self.max_duration + self._slack_seconds:
+                return True
+        return False
 
     def flush(self) -> list[BehavioralEpisodeV1]:
         out = [self._finalize(ep, "end_of_stream") for ep in self.active.values()]
         self.active = {}
         return out
+
+    # ------------------------------------------------------------------ #
+    def to_state(self) -> dict:
+        return {
+            "gap": self.gap, "max_duration": self.max_duration,
+            "window_seconds": self.window_seconds, "allowed_lateness_seconds": self.allowed_lateness_seconds,
+            "active": {eid: {
+                "episode_id": ep.episode_id, "start_time": ep.start_time.isoformat(),
+                "end_time": ep.end_time.isoformat(), "first_signal_id": ep.first_signal_id,
+                "asset_ids": sorted(ep.asset_ids), "relationship_ids": sorted(ep.relationship_ids),
+                "reason_codes": sorted(ep.reason_codes),
+                "signals": [s.to_dict() for s in ep.signals],
+            } for eid, ep in self.active.items()},
+            "seen": list(self._seen.keys()),
+            "max_ws": self._max_ws.isoformat() if self._max_ws else None,
+            "counters": self.counters,
+        }
+
+    @classmethod
+    def from_state(cls, state: dict) -> BehavioralEpisodeCorrelator:
+        c = cls(state["gap"], state["max_duration"], None,
+                state["window_seconds"], state["allowed_lateness_seconds"])
+        for eid, d in state["active"].items():
+            ep = _Active(episode_id=d["episode_id"],
+                         start_time=datetime.fromisoformat(d["start_time"]),
+                         end_time=datetime.fromisoformat(d["end_time"]),
+                         first_signal_id=d["first_signal_id"])
+            ep.signals = [Signal.from_dict(s) for s in d["signals"]]
+            ep.asset_ids = set(d["asset_ids"])
+            ep.relationship_ids = set(d["relationship_ids"])
+            ep.reason_codes = set(d["reason_codes"])
+            c.active[eid] = ep
+        c._seen = {sid: None for sid in state["seen"]}
+        c._max_ws = datetime.fromisoformat(state["max_ws"]) if state["max_ws"] else None
+        c.counters = state["counters"]
+        return c
 
     # ------------------------------------------------------------------ #
     def _create(self, signal: Signal) -> None:
@@ -94,6 +189,7 @@ class BehavioralEpisodeCorrelator:
                      first_signal_id=signal.signal_id)
         self._extend(ep, signal)
         self.active[eid] = ep
+        self.counters["episodes_created_total"] += 1
 
     def _extend(self, ep: _Active, signal: Signal) -> None:
         ep.signals.append(signal)
@@ -107,6 +203,7 @@ class BehavioralEpisodeCorrelator:
             ep.start_time = signal.window_start
 
     def _finalize(self, ep: _Active, close_reason: str) -> BehavioralEpisodeV1:
+        self.counters["episodes_closed_total"] += 1
         edge = [s for s in ep.signals if s.signal_type == "edge"]
         node = [s for s in ep.signals if s.signal_type == "node"]
         families = families_for(sorted(ep.reason_codes))
@@ -190,9 +287,11 @@ class BehavioralEpisodeCorrelator:
 
 def correlate(signals: list[Signal], correlation_gap_seconds: int = 60,
               max_episode_duration_seconds: int = 600,
-              identity_map: dict | None = None) -> list[BehavioralEpisodeV1]:
-    """Correlate a chronological signal list into closed Behavioral Episodes."""
-    corr = BehavioralEpisodeCorrelator(correlation_gap_seconds, max_episode_duration_seconds, identity_map)
+              identity_map: dict | None = None,
+              window_seconds: int = 30, allowed_lateness_seconds: int = 30) -> list[BehavioralEpisodeV1]:
+    """Correlate a chronological signal list into closed Behavioral Episodes (offline)."""
+    corr = BehavioralEpisodeCorrelator(correlation_gap_seconds, max_episode_duration_seconds,
+                                       identity_map, window_seconds, allowed_lateness_seconds)
     episodes: list[BehavioralEpisodeV1] = []
     for s in sorted(signals, key=lambda x: (x.window_start, x.signal_type, x.signal_id)):
         episodes.extend(corr.add(s))

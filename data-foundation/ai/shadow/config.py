@@ -39,6 +39,10 @@ class ShadowConfig:
         default_factory=lambda: PROJECT_ROOT / "ai" / "node_behavior" / "artifacts" / "node_behavior" / "node-stat-v1")
     node_threshold: float = 0.719  # provisional
 
+    episodes_enabled: bool = True
+    episode_correlation_gap_seconds: int = 60
+    episode_max_duration_seconds: int = 600
+
     def __post_init__(self) -> None:
         if self.mode != "shadow":
             raise ValueError(f"only mode='shadow' is supported; got {self.mode!r}")

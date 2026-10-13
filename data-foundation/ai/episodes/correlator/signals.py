@@ -19,6 +19,25 @@ class Signal:
     result_ref: str
     evidence_refs: tuple[str, ...]
 
+    def to_dict(self) -> dict:
+        return {
+            "signal_id": self.signal_id, "signal_type": self.signal_type,
+            "window_start": self.window_start.isoformat(), "window_end": self.window_end.isoformat(),
+            "score": self.score, "severity": self.severity,
+            "reason_codes": list(self.reason_codes), "asset_ids": list(self.asset_ids),
+            "relationship_id": self.relationship_id, "result_ref": self.result_ref,
+            "evidence_refs": list(self.evidence_refs),
+        }
+
+    @classmethod
+    def from_dict(cls, d: dict) -> Signal:
+        return cls(signal_id=d["signal_id"], signal_type=d["signal_type"],
+                   window_start=datetime.fromisoformat(d["window_start"]),
+                   window_end=datetime.fromisoformat(d["window_end"]), score=float(d["score"]),
+                   severity=d["severity"], reason_codes=tuple(d["reason_codes"]),
+                   asset_ids=tuple(d["asset_ids"]), relationship_id=d.get("relationship_id"),
+                   result_ref=d["result_ref"], evidence_refs=tuple(d["evidence_refs"]))
+
 
 def _reason_codes(result) -> tuple[str, ...]:
     return tuple(sorted({r.code for r in result.reasons}))
