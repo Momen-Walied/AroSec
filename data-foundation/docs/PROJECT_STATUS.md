@@ -15,7 +15,9 @@ Read-only shadow platform. This file is the authoritative high-level status.
 | Behavioral Episode Shadow Integration v1 | **COMPLETE / SHADOW-READY** |
 | Temporal Graph Design v1 (Phase 4A) | **COMPLETE** |
 | Graph-Context Edge Anomaly v1 (Phase 4B) | **COMPLETE / RESEARCH BASELINE** |
-| Neural Temporal GNN | **BLOCKED — current graph data insufficient** |
+| Graph Data Readiness v1 (Phase 4C) | **COMPLETE** |
+| Current UNSW graph | **NOT GNN-READY** |
+| Neural Temporal GNN (Phase 4D) | **BLOCKED — WAITING FOR QUALIFYING GRAPH DATA** |
 | Graph-Context Shadow Integration | **NOT APPROVED** |
 
 ## Semantic invariants (preserved)
@@ -81,7 +83,34 @@ currently obscures that signal. This is a research hypothesis to revisit on rich
 - feature generation p99 **0.161 ms**; **CPU-only**.
 - best provisional context: **1-hop / 1-hour lookback**; **2-hop adds nothing**.
 
+## Phase 4C — Graph Data Readiness
+
+- **Graph Data Readiness v1 (4C):** COMPLETE.
+- **Current UNSW:** **NOT GNN-READY** (14 dimensions → 10 FAIL / 3 WARN / 1 PASS; entry gate
+  BLOCKED). Derived from measured graph properties, not hardcoded dataset identity.
+- **Temporal GNN Research (Phase 4D):** **BLOCKED — WAITING FOR QUALIFYING GRAPH DATA.**
+- **Next operational dependency:** **NETWORK/SECURITY LAB DATA CAPTURE**
+  (`docs/NETWORK_SECURITY_GRAPH_DATA_CAPTURE_SPEC_V1.md`).
+
+### Amendments folded into 4C
+
+- **Role-holdout feasibility:** ≥ 3 independent assets per key role required for inductive
+  evaluation; many nodes with one device per role is **not** ready (new dimension
+  `ROLE_GENERALIZATION`). Total node count alone cannot make a dataset appear ready.
+- **Independent ground-truth provenance:** structural ground truth must not be derived from the
+  anomaly outputs/scores/telemetry under evaluation (new dimension `GROUND_TRUTH_PROVENANCE`).
+- **Dataset package integrity/versioning:** immutable identity (dataset id/version, capture/lab
+  run id, schema versions, checksums) required; every readiness report states which package it
+  evaluated (new dimension `DATASET_INTEGRITY`).
+
+### Phase 4D entry gate
+
+All critical readiness dimensions must PASS on a captured dataset (hub dominance, ≥2 topology
+regions, ≥100 non-hub edges, ≥200 new-edge events, identity ≥ L2, replicated expected/unusual
+scenarios with hard controls, independent provenance, role-holdout feasibility, entity/topology/
+time holdout, non-global 2-hop context, dataset integrity). Phase 4D is **not started**.
+
 ## Not started (gated)
 
-Neural GNN / Temporal GNN, Attack Path reconstruction, attack-stage model, Incident Engine,
-Campaign reconstruction, score fusion, automated remediation/retraining.
+Neural GNN / Temporal GNN (Phase 4D), Attack Path reconstruction, attack-stage model, Incident
+Engine, Campaign reconstruction, score fusion, automated remediation/retraining.

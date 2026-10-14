@@ -1,0 +1,632 @@
+{
+  "structural": {
+    "node_count": 63,
+    "edge_count": 74,
+    "density": 0.018945,
+    "weak_components": 1,
+    "largest_component_share": 1.0,
+    "degree_p50": 1,
+    "degree_p90": 1,
+    "degree_max": 62,
+    "degree_entropy": 0.6654,
+    "hub_dominance_top1": 0.5,
+    "hub_dominance_top5": 0.7761,
+    "hub_node_count": 1,
+    "assortativity": -1.0,
+    "avg_clustering": 0.0,
+    "core_components": 1,
+    "core_component_sizes": [
+      1
+    ],
+    "independent_local_neighborhoods": 1,
+    "mean_1hop": 1.968,
+    "mean_2hop": 62.0,
+    "two_hop_minus_one_hop": 60.032,
+    "new_edge_count": 74,
+    "reappearing_relationships": 50,
+    "non_hub_target_edges": 0,
+    "non_hub_edge_share": 0.0
+  },
+  "temporal": {
+    "span_days": 31.178,
+    "relationship_births": 74,
+    "relationship_births_per_day": 8.222,
+    "days_with_births": 9,
+    "inactivity_transitions_1h": 5030,
+    "inactivity_transitions_24h": 50,
+    "new_peer_events": 74,
+    "burst_windows": 771,
+    "chain_formations": 805,
+    "peer_set_turnover": 0.4355
+  },
+  "identity_level": "L0_ip_only",
+  "role_coverage": 0.0,
+  "zone_coverage": 0.0,
+  "roles": {},
+  "dataset_identity": {
+    "dataset_id": "unsw_iotraffic",
+    "dataset_version": "v0.2",
+    "capture_id": null,
+    "lab_run_id": null,
+    "schema_versions": {
+      "data_contract": "0.2"
+    },
+    "generated_at": null,
+    "source_manifests": [
+      "processed/v2/build_manifest_v2.json"
+    ],
+    "checksums": {}
+  },
+  "new_node_samples": 62,
+  "clock": {
+    "n": 67885,
+    "missing": 0,
+    "out_of_order": 0,
+    "max_gap_seconds": 34290.0,
+    "tolerance_seconds": 1.0,
+    "status": "PASS",
+    "reasons": []
+  },
+  "dimensions": [
+    {
+      "dimension": "STRUCTURAL_DIVERSITY",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "top-1 node incident to 50.0% of edge-windows",
+        "only 1 independent local neighbourhood(s)"
+      ],
+      "metrics": {
+        "node_count": 63,
+        "edge_count": 74,
+        "density": 0.018945,
+        "weak_components": 1,
+        "largest_component_share": 1.0,
+        "degree_p50": 1,
+        "degree_p90": 1,
+        "degree_max": 62,
+        "degree_entropy": 0.6654,
+        "hub_dominance_top1": 0.5,
+        "hub_dominance_top5": 0.7761,
+        "hub_node_count": 1,
+        "assortativity": -1.0,
+        "avg_clustering": 0.0,
+        "core_components": 1,
+        "core_component_sizes": [
+          1
+        ],
+        "independent_local_neighborhoods": 1,
+        "mean_1hop": 1.968,
+        "mean_2hop": 62.0,
+        "two_hop_minus_one_hop": 60.032,
+        "new_edge_count": 74,
+        "reappearing_relationships": 50,
+        "non_hub_target_edges": 0,
+        "non_hub_edge_share": 0.0
+      }
+    },
+    {
+      "dimension": "TEMPORAL_DIVERSITY",
+      "status": "WARN",
+      "critical": true,
+      "reasons": [],
+      "metrics": {
+        "span_days": 31.178,
+        "relationship_births": 74,
+        "relationship_births_per_day": 8.222,
+        "days_with_births": 9,
+        "inactivity_transitions_1h": 5030,
+        "inactivity_transitions_24h": 50,
+        "new_peer_events": 74,
+        "burst_windows": 771,
+        "chain_formations": 805,
+        "peer_set_turnover": 0.4355
+      }
+    },
+    {
+      "dimension": "IDENTITY_QUALITY",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "identity level L0_ip_only below required L2"
+      ],
+      "metrics": {
+        "level": "L0_ip_only",
+        "index": 0
+      }
+    },
+    {
+      "dimension": "GROUND_TRUTH_QUALITY",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "no structural ground truth recorded",
+        "missing transition types: chain_formation, cross_zone_communication, expected_structural_transition, fanout_burst, inbound_convergence, normal_role_consistent_new_edge, peer_set_replacement, role_inconsistent_new_edge, topology_rewiring, unusual_structural_transition"
+      ],
+      "metrics": {
+        "n": 0,
+        "by_transition_type": {},
+        "by_expectedness": {},
+        "by_origin": {},
+        "missing_transition_types": [
+          "chain_formation",
+          "cross_zone_communication",
+          "expected_structural_transition",
+          "fanout_burst",
+          "inbound_convergence",
+          "normal_role_consistent_new_edge",
+          "peer_set_replacement",
+          "role_inconsistent_new_edge",
+          "topology_rewiring",
+          "unusual_structural_transition"
+        ],
+        "has_expected_and_unusual": false,
+        "min_scenario_replication": 0,
+        "max_scenario_replication": 0,
+        "distinct_scenarios": 0
+      }
+    },
+    {
+      "dimension": "GROUND_TRUTH_PROVENANCE",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "no ground truth rows"
+      ],
+      "metrics": {
+        "ok": false,
+        "n": 0,
+        "missing_source": 0,
+        "forbidden_source": 0,
+        "missing_recorded_at": 0,
+        "reasons": [
+          "no ground truth rows"
+        ]
+      }
+    },
+    {
+      "dimension": "NON_HUB_COVERAGE",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "only 0 non-hub target edges"
+      ],
+      "metrics": {
+        "non_hub_target_edges": 0,
+        "non_hub_edge_share": 0.0
+      }
+    },
+    {
+      "dimension": "NEW_EDGE_COVERAGE",
+      "status": "WARN",
+      "critical": true,
+      "reasons": [],
+      "metrics": {
+        "new_edge_count": 74
+      }
+    },
+    {
+      "dimension": "COLD_START_COVERAGE",
+      "status": "PASS",
+      "critical": true,
+      "reasons": [],
+      "metrics": {
+        "new_node_samples": 62
+      }
+    },
+    {
+      "dimension": "ROLE_DIVERSITY",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "no role/zone metadata available"
+      ],
+      "metrics": {
+        "role_coverage": 0.0,
+        "zone_coverage": 0.0
+      }
+    },
+    {
+      "dimension": "ROLE_GENERALIZATION",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "no role assignments (cannot test role hold-out)"
+      ],
+      "metrics": {
+        "roles": {},
+        "min_instances": 3,
+        "infeasible_roles": {},
+        "feasible": false
+      }
+    },
+    {
+      "dimension": "SCENARIO_REPLICATION",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "no scenario instances"
+      ],
+      "metrics": {
+        "n": 0,
+        "by_transition_type": {},
+        "by_expectedness": {},
+        "by_origin": {},
+        "missing_transition_types": [
+          "chain_formation",
+          "cross_zone_communication",
+          "expected_structural_transition",
+          "fanout_burst",
+          "inbound_convergence",
+          "normal_role_consistent_new_edge",
+          "peer_set_replacement",
+          "role_inconsistent_new_edge",
+          "topology_rewiring",
+          "unusual_structural_transition"
+        ],
+        "has_expected_and_unusual": false,
+        "min_scenario_replication": 0,
+        "max_scenario_replication": 0,
+        "distinct_scenarios": 0
+      }
+    },
+    {
+      "dimension": "SPLIT_QUALITY",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "no independent topology regions to hold out"
+      ],
+      "metrics": {
+        "independent_local_neighborhoods": 1
+      }
+    },
+    {
+      "dimension": "TWO_HOP_CONTEXT",
+      "status": "FAIL",
+      "critical": true,
+      "reasons": [
+        "2-hop gain 60.032 ~ whole graph (hub collapse, not local context)"
+      ],
+      "metrics": {
+        "two_hop_minus_one_hop": 60.032
+      }
+    },
+    {
+      "dimension": "DATASET_INTEGRITY",
+      "status": "WARN",
+      "critical": true,
+      "reasons": [
+        "missing recommended integrity: capture_id, lab_run_id, generated_at, checksums"
+      ],
+      "metrics": {
+        "status": "WARN",
+        "missing_required": [],
+        "missing_recommended": [
+          "capture_id",
+          "lab_run_id",
+          "generated_at",
+          "checksums"
+        ],
+        "identity": {
+          "dataset_id": "unsw_iotraffic",
+          "dataset_version": "v0.2",
+          "capture_id": null,
+          "lab_run_id": null,
+          "schema_versions": {
+            "data_contract": "0.2"
+          },
+          "generated_at": null,
+          "source_manifests": [
+            "processed/v2/build_manifest_v2.json"
+          ],
+          "checksums": {}
+        }
+      }
+    }
+  ],
+  "overall": "FAIL",
+  "gnn_entry_gate_passed": false,
+  "thresholds": {
+    "min_nodes": 20,
+    "hub_dominance_fail": 0.5,
+    "hub_dominance_warn": 0.3,
+    "min_independent_neighbourhoods_fail": 2,
+    "min_independent_neighbourhoods_warn": 4,
+    "two_hop_min_gain_fail": 0.5,
+    "non_hub_edges_fail": 100,
+    "non_hub_edges_warn": 500,
+    "new_edges_fail": 50,
+    "new_edges_warn": 200,
+    "temporal_births_fail": 50,
+    "inactivity_fail": 10,
+    "identity_min_level": 2,
+    "cold_start_fail": 20,
+    "replication_min": 3,
+    "min_scenarios": 8
+  },
+  "scenario_catalog": [
+    {
+      "scenario_id": "LAB-G01",
+      "name": "Legitimate new peer",
+      "setup": "Add a new but plausible peer to an existing role.",
+      "expected_transition": "A known node begins communicating with a role-consistent new peer.",
+      "expected_label": "normal_role_consistent_new_edge",
+      "expectedness": "EXPECTED",
+      "duration_min": 30,
+      "entities": [
+        "engineering_ws",
+        "plc_02"
+      ],
+      "cleanup": "Stop traffic; leave history.",
+      "evidence": [
+        "flow",
+        "ground-truth note"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G02",
+      "name": "Role-consistent new device",
+      "setup": "Commission a new device consistent with existing roles.",
+      "expected_transition": "New device joins and communicates with its expected peers.",
+      "expected_label": "normal_role_consistent_new_edge",
+      "expectedness": "EXPECTED",
+      "duration_min": 45,
+      "entities": [
+        "plc_03",
+        "historian"
+      ],
+      "cleanup": "Decommission or park.",
+      "evidence": [
+        "flow",
+        "asset sheet"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G03",
+      "name": "Role-inconsistent new peer",
+      "setup": "Make a camera talk to an engineering workstation (role violation).",
+      "expected_transition": "Camera -> engineering workstation edge appears.",
+      "expected_label": "role_inconsistent_new_edge",
+      "expectedness": "UNUSUAL",
+      "duration_min": 20,
+      "entities": [
+        "camera_01",
+        "engineering_ws"
+      ],
+      "cleanup": "Stop traffic.",
+      "evidence": [
+        "flow",
+        "operator note"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G04",
+      "name": "Fan-out burst",
+      "setup": "One node rapidly initiates many new relationships.",
+      "expected_transition": "Source-out degree spikes with several new peers within the window.",
+      "expected_label": "fanout_burst",
+      "expectedness": "UNUSUAL",
+      "duration_min": 15,
+      "entities": [
+        "asset_x"
+      ],
+      "cleanup": "Stop traffic.",
+      "evidence": [
+        "flow"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G05",
+      "name": "Inbound convergence",
+      "setup": "Many nodes begin connecting to one destination.",
+      "expected_transition": "Destination inbound degree spikes with many new sources.",
+      "expected_label": "inbound_convergence",
+      "expectedness": "UNUSUAL",
+      "duration_min": 15,
+      "entities": [
+        "asset_y"
+      ],
+      "cleanup": "Stop traffic.",
+      "evidence": [
+        "flow"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G06",
+      "name": "Peer-set replacement",
+      "setup": "A node keeps similar volume but replaces its peer set.",
+      "expected_transition": "Neighbor-set change high, volume approximately stable.",
+      "expected_label": "peer_set_replacement",
+      "expectedness": "UNUSUAL",
+      "duration_min": 30,
+      "entities": [
+        "asset_z"
+      ],
+      "cleanup": "Restore original peers.",
+      "evidence": [
+        "flow"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G07",
+      "name": "Local topology rewiring",
+      "setup": "Rewire edges within one neighborhood without new volume.",
+      "expected_transition": "Local subgraph changes shape; global volume stable.",
+      "expected_label": "topology_rewiring",
+      "expectedness": "UNUSUAL",
+      "duration_min": 30,
+      "entities": [
+        "plc_01",
+        "plc_02",
+        "broker"
+      ],
+      "cleanup": "Restore topology.",
+      "evidence": [
+        "flow"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G08",
+      "name": "Cross-zone relationship",
+      "setup": "An edge crosses from one zone to another where it normally would not.",
+      "expected_transition": "New edge whose endpoints are in different zones.",
+      "expected_label": "cross_zone_communication",
+      "expectedness": "UNUSUAL",
+      "duration_min": 20,
+      "entities": [
+        "camera_02",
+        "plc_03"
+      ],
+      "cleanup": "Stop traffic.",
+      "evidence": [
+        "flow",
+        "zone map"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G09",
+      "name": "Temporal chain",
+      "setup": "A -> B then B -> C within a short window.",
+      "expected_transition": "Two-hop directed chain forms within the window.",
+      "expected_label": "chain_formation",
+      "expectedness": "UNUSUAL",
+      "duration_min": 20,
+      "entities": [
+        "asset_a",
+        "asset_b",
+        "asset_c"
+      ],
+      "cleanup": "Stop traffic.",
+      "evidence": [
+        "flow"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G10",
+      "name": "Multi-node structural change",
+      "setup": "Several nodes change relationships simultaneously.",
+      "expected_transition": "Multiple neighborhoods change in the same window.",
+      "expected_label": "topology_rewiring",
+      "expectedness": "UNUSUAL",
+      "duration_min": 30,
+      "entities": [
+        "group_1"
+      ],
+      "cleanup": "Restore topology.",
+      "evidence": [
+        "flow"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G11",
+      "name": "Device replacement / identity change",
+      "setup": "A device is replaced; identity (MAC/role) changes.",
+      "expected_transition": "New identity appears in an existing role; old identity goes quiet.",
+      "expected_label": "expected_structural_transition",
+      "expectedness": "EXPECTED",
+      "duration_min": 45,
+      "entities": [
+        "plc_02_old",
+        "plc_02_new"
+      ],
+      "cleanup": "Decommission old identity.",
+      "evidence": [
+        "flow",
+        "asset sheet"
+      ]
+    },
+    {
+      "scenario_id": "LAB-G12",
+      "name": "Legitimate maintenance window",
+      "setup": "A scheduled maintenance burst by an admin node.",
+      "expected_transition": "Temporary new edges during a declared maintenance window.",
+      "expected_label": "expected_structural_transition",
+      "expectedness": "EXPECTED",
+      "duration_min": 60,
+      "entities": [
+        "jump_host"
+      ],
+      "cleanup": "End window; note in manifest.",
+      "evidence": [
+        "flow",
+        "change ticket"
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "unusual": "camera -> engineering_ws",
+      "control": "camera -> nvr",
+      "pairs_with": "LAB-G03"
+    },
+    {
+      "unusual": "plc -> arbitrary_iot",
+      "control": "plc -> historian",
+      "pairs_with": "LAB-G03"
+    },
+    {
+      "unusual": "cross-zone camera -> plc",
+      "control": "cross-zone camera -> nvr (allowed path)",
+      "pairs_with": "LAB-G08"
+    }
+  ],
+  "entry_gate": [
+    {
+      "requirement": "STRUCTURAL_DIVERSITY",
+      "rule": "acceptable hub dominance, >=2 independent local neighbourhoods"
+    },
+    {
+      "requirement": "NON_HUB_COVERAGE",
+      "rule": "meaningful non-hub target-edge count"
+    },
+    {
+      "requirement": "NEW_EDGE_COVERAGE",
+      "rule": "enough new-edge events for evaluation"
+    },
+    {
+      "requirement": "TEMPORAL_DIVERSITY",
+      "rule": "enough structural transitions over time"
+    },
+    {
+      "requirement": "IDENTITY_QUALITY",
+      "rule": "identity level >= L2"
+    },
+    {
+      "requirement": "ROLE_DIVERSITY",
+      "rule": "roles and zones recorded where required by the evaluated task"
+    },
+    {
+      "requirement": "GROUND_TRUTH_QUALITY",
+      "rule": "expected/unusual ground truth present"
+    },
+    {
+      "requirement": "GROUND_TRUTH_PROVENANCE",
+      "rule": "independent ground-truth source (never the anomaly outputs)"
+    },
+    {
+      "requirement": "SCENARIO_REPLICATION",
+      "rule": ">= 3 instances per key scenario + hard controls"
+    },
+    {
+      "requirement": "COLD_START_COVERAGE",
+      "rule": "new-node categories represented"
+    },
+    {
+      "requirement": "ROLE_GENERALIZATION",
+      "rule": ">= 3 independent assets per key role for hold-out"
+    },
+    {
+      "requirement": "SPLIT_QUALITY",
+      "rule": "entity/topology/time holdout evaluation is possible"
+    },
+    {
+      "requirement": "TWO_HOP_CONTEXT",
+      "rule": "2-hop adds local (not whole-graph) context"
+    },
+    {
+      "requirement": "DATASET_INTEGRITY",
+      "rule": "immutable dataset package/version identity recorded"
+    }
+  ]
+}
