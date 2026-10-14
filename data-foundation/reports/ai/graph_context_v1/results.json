@@ -1,0 +1,472 @@
+{
+  "normal_eval": {
+    "shift_days": 31.178,
+    "generation_seconds": 6.59,
+    "splits": {
+      "train": 40732,
+      "validation": 13577,
+      "test": 13576
+    },
+    "threshold": 0.7358,
+    "test": {
+      "n": 13576,
+      "alert_rate": 0.0135,
+      "alerts": 183,
+      "alerts_per_site_per_day": 5.869,
+      "alerts_per_entity_per_day": 0.4192,
+      "alerts_per_relationship_per_day": 0.0793
+    },
+    "edge_test_alert_rate": 0.0178,
+    "edge_test_alerts": 241,
+    "hub_strata": {
+      "hub_involved": {
+        "n": 13576,
+        "alert_rate": 0.0135
+      },
+      "non_hub": {
+        "n": 0,
+        "alert_rate": 0.0
+      }
+    },
+    "bucket_strata": {
+      "src_hub": {
+        "n": 13523,
+        "alert_rate": 0.0126
+      },
+      "src_low": {
+        "n": 53,
+        "alert_rate": 0.2264
+      },
+      "dst_hub": {
+        "n": 53,
+        "alert_rate": 0.2264
+      },
+      "dst_low": {
+        "n": 13523,
+        "alert_rate": 0.0126
+      }
+    },
+    "new_vs_known_edge_test": {
+      "new_edge": {
+        "n": 1124,
+        "alert_rate": 0.0187
+      },
+      "known_edge": {
+        "n": 12452,
+        "alert_rate": 0.013
+      }
+    }
+  },
+  "feature_overlap_audit": [
+    {
+      "graph_feature": "destination_neighbor_set_change",
+      "closest_existing_feature": "edge.historical_connection_count",
+      "pearson": -0.255,
+      "abs_pearson": 0.255,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "target_structural_novelty",
+      "closest_existing_feature": "edge.historical_connection_count",
+      "pearson": -0.193,
+      "abs_pearson": 0.193,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "destination_peer_set_novelty",
+      "closest_existing_feature": "edge.historical_connection_count",
+      "pearson": -0.152,
+      "abs_pearson": 0.152,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "local_new_edge_rate",
+      "closest_existing_feature": "edge.protocol_novelty_count",
+      "pearson": 0.13,
+      "abs_pearson": 0.13,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "local_degree_change_rate",
+      "closest_existing_feature": "edge.src_unique_peer_count",
+      "pearson": -0.12,
+      "abs_pearson": 0.12,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "source_neighbor_set_change",
+      "closest_existing_feature": "edge.src_unique_peer_count",
+      "pearson": -0.101,
+      "abs_pearson": 0.101,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "source_peer_set_novelty",
+      "closest_existing_feature": "edge.src_unique_peer_count",
+      "pearson": -0.075,
+      "abs_pearson": 0.075,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "source_neighbor_similarity",
+      "closest_existing_feature": null,
+      "pearson": 0.0,
+      "abs_pearson": 0.0,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "destination_neighbor_similarity",
+      "closest_existing_feature": null,
+      "pearson": 0.0,
+      "abs_pearson": 0.0,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "causal_jaccard",
+      "closest_existing_feature": null,
+      "pearson": 0.0,
+      "abs_pearson": 0.0,
+      "classification": "NEW GRAPH INFORMATION"
+    },
+    {
+      "graph_feature": "causal_adamic_adar",
+      "closest_existing_feature": null,
+      "pearson": 0.0,
+      "abs_pearson": 0.0,
+      "classification": "NEW GRAPH INFORMATION"
+    }
+  ],
+  "complementarity": {
+    "edge_graph_pearson": -0.032,
+    "edge_graph_spearman": -0.056,
+    "node_graph_pearson": 0.008,
+    "node_graph_spearman": 0.074,
+    "n_edge": 13576,
+    "n_node": 13576
+  },
+  "quadrants": {
+    "both_high": 13,
+    "edge_high_graph_low": 228,
+    "edge_low_graph_high": 170,
+    "both_low": 13165
+  },
+  "disagreement": {
+    "edge_high_graph_low": [
+      {
+        "relationship_id": "rel:asset:unsw:203.5.76.16|asset:unsw:192.168.1.240|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 19:54:00+00:00",
+        "edge_score": 0.766,
+        "graph_score": 0.593,
+        "src_bucket": "low",
+        "dst_bucket": "hub",
+        "new_structural_edge": false
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:23.23.78.14|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 22:10:00+00:00",
+        "edge_score": 0.764,
+        "graph_score": 0.498,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": true
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:205.251.242.2|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 05:45:00+00:00",
+        "edge_score": 0.735,
+        "graph_score": 0.652,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": true
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:129.6.15.29|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 22:10:30+00:00",
+        "edge_score": 0.731,
+        "graph_score": 0.68,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": true
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:192.96.202.120|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 22:10:30+00:00",
+        "edge_score": 0.723,
+        "graph_score": 0.68,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": true
+      }
+    ],
+    "edge_low_graph_high": [
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:192.96.202.120|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 23:07:00+00:00",
+        "edge_score": 0.213,
+        "graph_score": 0.955,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": false
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:207.171.178.6|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 23:08:00+00:00",
+        "edge_score": 0.187,
+        "graph_score": 0.955,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": false
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:72.21.207.109|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 22:54:30+00:00",
+        "edge_score": 0.22,
+        "graph_score": 0.954,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": false
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:192.96.202.120|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 22:52:30+00:00",
+        "edge_score": 0.217,
+        "graph_score": 0.948,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": false
+      },
+      {
+        "relationship_id": "rel:asset:unsw:192.168.1.240|asset:unsw:204.9.54.119|COMMUNICATES_WITH",
+        "window_start": "2016-10-27 22:53:30+00:00",
+        "edge_score": 0.307,
+        "graph_score": 0.948,
+        "src_bucket": "hub",
+        "dst_bucket": "low",
+        "new_structural_edge": false
+      }
+    ]
+  },
+  "scenarios": {
+    "SCN-G01_NEW_EDGE": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.9034,
+      "family_scores": {
+        "novelty": 3.22,
+        "change": 3.488,
+        "low_similarity": 0.0
+      },
+      "neighborhood_size": 4,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.0,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G02_FANOUT_BURST": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.8643,
+      "family_scores": {
+        "novelty": 3.22,
+        "change": 2.333,
+        "low_similarity": 0.0
+      },
+      "neighborhood_size": 3,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.0,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G03_CHAIN_FORMATION": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.7129,
+      "family_scores": {
+        "novelty": 0.395,
+        "change": 2.333,
+        "low_similarity": 0.0
+      },
+      "neighborhood_size": 3,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.0,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G04_LOCAL_REWIRING": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.917,
+      "family_scores": {
+        "novelty": 3.22,
+        "change": 4.644,
+        "low_similarity": -0.655
+      },
+      "neighborhood_size": 3,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 1.0,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G05_INBOUND_CONVERGENCE": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.8813,
+      "family_scores": {
+        "novelty": 3.22,
+        "change": 2.795,
+        "low_similarity": 0.0
+      },
+      "neighborhood_size": 4,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.0,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G06_NORMAL_NEW_EDGE": {
+      "structurally_unusual": false,
+      "graph_context_score": 0.9347,
+      "family_scores": {
+        "novelty": 4.692,
+        "change": 4.181,
+        "low_similarity": -0.888
+      },
+      "neighborhood_size": 5,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.6667,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G07_UNUSUAL_EDGE": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.9506,
+      "family_scores": {
+        "novelty": 4.692,
+        "change": 4.181,
+        "low_similarity": 0.0
+      },
+      "neighborhood_size": 6,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.0,
+      "edge_proxy_new_peer": 1.0
+    },
+    "SCN-G08_COMPOUND_CHANGE": {
+      "structurally_unusual": true,
+      "graph_context_score": 0.9301,
+      "family_scores": {
+        "novelty": 4.692,
+        "change": 3.072,
+        "low_similarity": 0.0
+      },
+      "neighborhood_size": 5,
+      "target_structural_novelty": 1.0,
+      "causal_jaccard": 0.0,
+      "edge_proxy_new_peer": 1.0
+    }
+  },
+  "ablation": {
+    "l300_h1": {
+      "lookback_seconds": 300,
+      "hops": 1,
+      "n": 13577,
+      "neighborhood_size_p50": 8.0,
+      "neighborhood_size_p95": 10.0,
+      "test_alert_rate": 0.021,
+      "hub_alert_rate": 0.021,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.8553,
+      "scenario_g07_unusual": 0.8882,
+      "scenario_gap": 0.0329
+    },
+    "l300_h2": {
+      "lookback_seconds": 300,
+      "hops": 2,
+      "n": 13577,
+      "neighborhood_size_p50": 8.0,
+      "neighborhood_size_p95": 10.0,
+      "test_alert_rate": 0.021,
+      "hub_alert_rate": 0.021,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.8553,
+      "scenario_g07_unusual": 0.8882,
+      "scenario_gap": 0.0329
+    },
+    "l1800_h1": {
+      "lookback_seconds": 1800,
+      "hops": 1,
+      "n": 13577,
+      "neighborhood_size_p50": 14.0,
+      "neighborhood_size_p95": 17.0,
+      "test_alert_rate": 0.0376,
+      "hub_alert_rate": 0.0376,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.9144,
+      "scenario_g07_unusual": 0.9349,
+      "scenario_gap": 0.0205
+    },
+    "l1800_h2": {
+      "lookback_seconds": 1800,
+      "hops": 2,
+      "n": 13577,
+      "neighborhood_size_p50": 14.0,
+      "neighborhood_size_p95": 17.0,
+      "test_alert_rate": 0.0376,
+      "hub_alert_rate": 0.0376,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.9144,
+      "scenario_g07_unusual": 0.9349,
+      "scenario_gap": 0.0205
+    },
+    "l3600_h1": {
+      "lookback_seconds": 3600,
+      "hops": 1,
+      "n": 13577,
+      "neighborhood_size_p50": 18.0,
+      "neighborhood_size_p95": 22.0,
+      "test_alert_rate": 0.0136,
+      "hub_alert_rate": 0.0136,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.9355,
+      "scenario_g07_unusual": 0.9513,
+      "scenario_gap": 0.0158
+    },
+    "l3600_h2": {
+      "lookback_seconds": 3600,
+      "hops": 2,
+      "n": 13577,
+      "neighborhood_size_p50": 18.0,
+      "neighborhood_size_p95": 22.0,
+      "test_alert_rate": 0.0136,
+      "hub_alert_rate": 0.0136,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.9355,
+      "scenario_g07_unusual": 0.9513,
+      "scenario_gap": 0.0158
+    },
+    "l86400_h1": {
+      "lookback_seconds": 86400,
+      "hops": 1,
+      "n": 13577,
+      "neighborhood_size_p50": 32.0,
+      "neighborhood_size_p95": 37.0,
+      "test_alert_rate": 0.3134,
+      "hub_alert_rate": 0.3134,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.9831,
+      "scenario_g07_unusual": 0.9874,
+      "scenario_gap": 0.0043
+    },
+    "l86400_h2": {
+      "lookback_seconds": 86400,
+      "hops": 2,
+      "n": 13577,
+      "neighborhood_size_p50": 32.0,
+      "neighborhood_size_p95": 37.0,
+      "test_alert_rate": 0.3134,
+      "hub_alert_rate": 0.3134,
+      "nonhub_alert_rate": 0.0,
+      "scenario_g06_plausible": 0.9831,
+      "scenario_g07_unusual": 0.9874,
+      "scenario_gap": 0.0043
+    }
+  },
+  "performance": {
+    "feature_generation_ms": {
+      "p50": 0.077,
+      "p95": 0.105,
+      "p99": 0.199,
+      "mean": 0.082
+    },
+    "scoring_ms_per_row": 5e-05,
+    "n_measured": 2000
+  },
+  "reports_dir": "/Users/Me/Work/Arosec/data-foundation/reports/ai/graph_context_v1"
+}
